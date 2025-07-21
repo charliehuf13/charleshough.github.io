@@ -28,3 +28,20 @@ h2 {
 p {
   max-width: 800px;
 }
+
+pre {
+  background-color: #eef2f7;
+  padding: 12px;
+  border-left: 4px solid #007acc;
+  overflow-x: auto;
+}
+
+code {
+  font-family: Consolas, monospace;
+  font-size: 0.95em;
+  color: #333;
+}
+
+.code-project img {
+  margin-top: 10px;
+}
