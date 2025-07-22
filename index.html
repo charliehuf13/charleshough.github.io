@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <title>Charles Hough – Home</title>
+
+  <!-- PicoCSS core -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+  <!-- Your custom overrides -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <div class="container">
@@ -16,22 +21,29 @@
         <a href="about.html">About Me</a>
         <a href="projects.html">Projects</a>
         <a href="journal.html">Journal</a>
+
         <div class="toggle-switch">
-          <input type="checkbox" id="darkModeToggle" aria-label="Toggle dark mode">
+          <input
+            type="checkbox"
+            id="darkModeToggle"
+            aria-label="Toggle dark mode"
+          >
           <span class="slider"></span>
           <label for="darkModeToggle">Dark Mode</label>
         </div>
+
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main class="container">
     <h2>Welcome</h2>
     <p>
-      Hello, I’m Charles Hough — a detail-oriented researcher exploring biology, chemistry, computing,
-      and technical problem-solving. This site shares my professional journey, academic
-      accomplishments, and ongoing exploration in science and technology. Website created July 2025.
+      Hello, I’m Charles Hough — a detail-oriented researcher exploring biology,
+      chemistry, computing, and technical problem-solving. This site shares my
+      professional journey, academic accomplishments, and ongoing exploration
+      in science and technology. Website created July 2025.
     </p>
   </main>
 </body>
