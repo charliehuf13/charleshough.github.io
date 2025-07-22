@@ -67,6 +67,7 @@ p, li, a {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-wrap: nowrap;        /* <<< Prevents the text from wrapping underneath the icon */
 }
 
 .contact-icon {
