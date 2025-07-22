@@ -34,15 +34,15 @@
     <div id="personal-projects" class="project-group">
       <div class="project-card">
         <h3>Recrystallization Protocol Optimization</h3>
-        <p><strong>Description:</strong> Refined an organic recrystallization workflow to reduce contamination and maximize yield.</p>
-        <p><strong>Takeaways:</strong> Reduced impurities by 20%, optimized solvent selection, and improved crystal consistency across runs.</p>
+        <p><strong>Description:</strong> Refined workflow to reduce contamination and maximize yield during organic recrystallization.</p>
+        <p><strong>Takeaways:</strong> Lowered impurity rates by 20% through solvent optimization and temperature control improvements.</p>
         <img src="assets/goggles-icon.png" alt="Lab goggles" width="40">
       </div>
 
       <div class="project-card">
         <h3>Distillation Yield Benchmark</h3>
-        <p><strong>Description:</strong> Compared fractional distillation efficiencies for multiple solvent systems under varying heat profiles.</p>
-        <p><strong>Takeaways:</strong> Identified ethanol-acetone pair as optimal for purity over time. Results informed lab standardization.</p>
+        <p><strong>Description:</strong> Compared multiple solvent systems for fractional distillation efficiency under different heating conditions.</p>
+        <p><strong>Takeaways:</strong> Ethanol–acetone showed highest purity at reduced energy cost. Protocol adopted for teaching lab use.</p>
         <img src="assets/goggles-icon.png" alt="Lab goggles" width="40">
       </div>
     </div>
@@ -52,7 +52,7 @@
       <div class="project-card">
         <h3>SSH Cluster Setup</h3>
         <p><strong>Date:</strong> March 2024</p>
-        <p><strong>Purpose:</strong> Automate configuration of Termius profiles for secure access to Oregon State’s CQLS compute servers.</p>
+        <p><strong>Purpose:</strong> Automate secure SSH configuration via Termius to streamline access to Oregon State's CQLS servers.</p>
         <details>
           <summary>View Script</summary>
           <pre><code>
@@ -66,7 +66,7 @@ scp config.json user@cqls.osu.edu:/home/user/.ssh/
       <div class="project-card">
         <h3>Yield Calculator Script</h3>
         <p><strong>Date:</strong> January 2024</p>
-        <p><strong>Purpose:</strong> Estimate theoretical yield based on reactant molar amounts and stoichiometry.</p>
+        <p><strong>Purpose:</strong> Generate quick theoretical yield estimates from input molar ratios and desired product mass.</p>
         <details>
           <summary>View Script</summary>
           <pre><code>
@@ -82,9 +82,14 @@ def calculate_yield(moles_reactant, theoretical_yield):
     <div id="visualizations" class="project-group" style="display: none;">
       <div class="project-card">
         <h3>Repeat Length Distribution</h3>
-        <p><strong>Dataset & Origin:</strong> Output table from EarlGrey repeat parser applied to genomic contig group X23.</p>
-        <p><strong>Purpose:</strong> Visualize distribution of repeat lengths to assess alignment drift across evolutionary groups.</p>
-        <img src="assets/repeat-chart.png" alt="Repeat summary chart" width="100%" style="margin: 10px 0;">
+        <p><strong>Dataset & Origin:</strong> Summary table from EarlGrey output applied to contig group X23.</p>
+        <p><strong>Purpose:</strong> Visualize distribution of genomic repeat lengths to identify potential divergence zones.</p>
+
+        <details>
+          <summary>Show Visualization</summary>
+          <img src="assets/repeat-chart.png" alt="Repeat summary chart" width="100%" style="margin: 10px 0;">
+        </details>
+
         <details>
           <summary>View R Script</summary>
           <pre><code>
@@ -98,9 +103,14 @@ ggplot(repeat_data, aes(x=RepeatLength)) +
 
       <div class="project-card">
         <h3>GC Content Scatter Plot</h3>
-        <p><strong>Dataset & Origin:</strong> FASTA sequence summary extracted from cleaned gene pool sequences.</p>
-        <p><strong>Purpose:</strong> Map GC content across scaffold positions to identify hotspots and anomalies.</p>
-        <img src="assets/gc-content-plot.png" alt="GC content chart" width="100%" style="margin: 10px 0;">
+        <p><strong>Dataset & Origin:</strong> FASTA-derived summary file from curated gene pool sequences.</p>
+        <p><strong>Purpose:</strong> Explore GC variation across scaffold positions to detect regulatory zones.</p>
+
+        <details>
+          <summary>Show Visualization</summary>
+          <img src="assets/gc-content-plot.png" alt="GC content chart" width="100%" style="margin: 10px 0;">
+        </details>
+
         <details>
           <summary>View R Script</summary>
           <pre><code>
