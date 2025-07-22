@@ -22,41 +22,69 @@
   </header>
 
   <main class="container">
-    <h2>Personal Projects</h2>
-
-    <div class="project-card">
-      <h3>Recrystallization Protocol Optimization</h3>
-      <p>Insert description here.</p>
-      <img src="assets/goggles-icon.png" alt="Lab goggles" width="40">
+    <h2>Projects</h2>
+    <div class="project-nav">
+      <button onclick="showCategory('personal-projects')">Personal</button>
+      <button onclick="showCategory('computational-projects')">Computational</button>
+      <button onclick="showCategory('visualizations')">Visualizations</button>
+      <button onclick="showCategory('all')">All Projects</button>
     </div>
 
-    <div class="project-card">
-      <h3>Distillation Yield Benchmark</h3>
-      <p>Insert description here.</p>
-      <img src="assets/goggles-icon.png" alt="Lab goggles" width="40">
+    <!-- Personal Projects -->
+    <div id="personal-projects" class="project-group">
+      <div class="project-card">
+        <h3>Recrystallization Protocol Optimization</h3>
+        <p>Insert description here.</p>
+        <img src="assets/goggles-icon.png" alt="Lab goggles" width="40">
+      </div>
+
+      <div class="project-card">
+        <h3>Distillation Yield Benchmark</h3>
+        <p>Insert description here.</p>
+        <img src="assets/goggles-icon.png" alt="Lab goggles" width="40">
+      </div>
     </div>
 
-    <h2>Computational Projects</h2>
-
-    <div class="project-card">
-      <h3>SSH Cluster Setup</h3>
-      <p>Automated Termius configuration for secure remote login to Oregon State’s CQLS servers.</p>
-      <pre><code>
+    <!-- Computational Projects -->
+    <div id="computational-projects" class="project-group" style="display: none;">
+      <div class="project-card">
+        <h3>SSH Cluster Setup</h3>
+        <p>Automated Termius configuration for secure CQLS access.</p>
+        <pre><code>
 #!/bin/bash
 scp config.json user@cqls.osu.edu:/home/user/.ssh/
-      </code></pre>
-      <img src="assets/terminal-icon.png" alt="Terminal icon" width="40">
-    </div>
+        </code></pre>
+        <img src="assets/terminal-icon.png" alt="Terminal icon" width="40">
+      </div>
 
-    <div class="project-card">
-      <h3>Yield Calculator Script</h3>
-      <p>Python-based tool for estimating theoretical yield based on limiting reagent input.</p>
-      <pre><code>
+      <div class="project-card">
+        <h3>Yield Calculator Script</h3>
+        <p>Python-based tool for estimating theoretical yield based on limiting reagent input.</p>
+        <pre><code>
 def calculate_yield(moles_reactant, theoretical_yield):
     return moles_reactant * theoretical_yield
-      </code></pre>
-      <img src="assets/terminal-icon.png" alt="Terminal icon" width="40">
+        </code></pre>
+        <img src="assets/terminal-icon.png" alt="Terminal icon" width="40">
+      </div>
+    </div>
+
+    <!-- Visualizations -->
+    <div id="visualizations" class="project-group" style="display: none;">
+      <div class="project-card">
+        <h3>Repeat Length Chart</h3>
+        <p>Insert visualization description here.</p>
+        <img src="assets/visualization1.png" alt="Repeat summary chart" width="100%">
+      </div>
     </div>
   </main>
+
+  <script>
+    function showCategory(categoryId) {
+      const sections = document.querySelectorAll('.project-group');
+      sections.forEach(section => {
+        section.style.display = (categoryId === 'all' || section.id === categoryId) ? 'block' : 'none';
+      });
+    }
+  </script>
 </body>
 </html>
