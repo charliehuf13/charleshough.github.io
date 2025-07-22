@@ -113,3 +113,33 @@ nav a {
     margin: 1rem auto;
   }
 }
+.dark-theme {
+  background-color: #121212;
+  color: #eee;
+}
+
+.dark-theme a {
+  color: #90caf9;
+}
+
+.theme-control {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* Icon container for contact page */
+.contact-icon {
+  background-color: #fff8dc;
+  padding: 0.4rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.dark-theme .contact-icon {
+  background-color: #fff8dc;
+}
+
+.contact-block {
+  margin: 1rem 0;
+}
