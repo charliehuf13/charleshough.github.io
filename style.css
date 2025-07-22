@@ -69,6 +69,22 @@ a:hover {
   color: #0055aa;               /* brighter on hover */
   border-bottom: 2px solid #0055aa; /* subtle underline on hover */
 }
+
+.button-link {
+  display: inline-block;
+  background-color: #002147;   /* deep navy */
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button-link:hover {
+  background-color: #0055aa;   /* lighter navy on hover */
+  transform: translateY(-1px); /* subtle lift */
+}
 /* ─── Typography ─── */
 .site-title {
   color: #002147;                /* deep navy name */
