@@ -148,3 +148,27 @@ nav a {
 a:hover {
   text-decoration: underline;
 }
+
+/* ─── Site Theme ─── */
+body {
+  background-color: #f8f9fc;       /* soft off-white */
+  color: #333333;                  /* charcoal body text */
+  font-family: system-ui, sans-serif;
+}
+
+.site-title {
+  color: #002147;                  /* navy for main name/title */
+  margin-bottom: 0.25rem;
+}
+
+h2, h3, h4 {
+  color: #003366;                  /* slightly lighter navy for section headers */
+}
+
+nav a {
+  color: #002147;                  /* navy nav links */
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
