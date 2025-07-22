@@ -24,33 +24,49 @@
   <main class="container">
     <h2>Projects</h2>
     <div class="project-nav">
-      <button onclick="showCategory('personal-projects')">Personal</button>
-      <button onclick="showCategory('computational-projects')">Computational</button>
-      <button onclick="showCategory('visualizations')">Visualizations</button>
+      <button onclick="showCategory('personal-projects')">
+        <img src="assets/icons8-fast-track-50.png" alt="Personal icon" width="18" style="vertical-align: middle;">
+        Personal
+      </button>
+      <button onclick="showCategory('computational-projects')">
+        <img src="assets/icons8-terminal-64.png" alt="Computational icon" width="18" style="vertical-align: middle;">
+        Computational
+      </button>
+      <button onclick="showCategory('visualizations')">
+        <img src="assets/icons8-eye-50.png" alt="Visualizations icon" width="18" style="vertical-align: middle;">
+        Visualizations
+      </button>
       <button onclick="showCategory('all')">All Projects</button>
     </div>
 
     <!-- Personal Projects -->
     <div id="personal-projects" class="project-group">
       <div class="project-card">
-        <h3>Recrystallization Protocol Optimization</h3>
+        <h3>
+          <img src="assets/icons8-fast-track-50.png" alt="Personal icon" width="24">
+          Recrystallization Protocol Optimization
+        </h3>
         <p><strong>Description:</strong> Refined workflow to reduce contamination and maximize yield during organic recrystallization.</p>
         <p><strong>Takeaways:</strong> Lowered impurity rates by 20% through solvent optimization and temperature control improvements.</p>
-        <img src="assets/goggles-icon.png" alt="Lab goggles" width="40">
       </div>
 
       <div class="project-card">
-        <h3>Distillation Yield Benchmark</h3>
+        <h3>
+          <img src="assets/icons8-fast-track-50.png" alt="Personal icon" width="24">
+          Distillation Yield Benchmark
+        </h3>
         <p><strong>Description:</strong> Compared multiple solvent systems for fractional distillation efficiency under different heating conditions.</p>
         <p><strong>Takeaways:</strong> Ethanol–acetone showed highest purity at reduced energy cost. Protocol adopted for teaching lab use.</p>
-        <img src="assets/goggles-icon.png" alt="Lab goggles" width="40">
       </div>
     </div>
 
     <!-- Computational Projects -->
     <div id="computational-projects" class="project-group" style="display: none;">
       <div class="project-card">
-        <h3>SSH Cluster Setup</h3>
+        <h3>
+          <img src="assets/icons8-terminal-64.png" alt="Terminal icon" width="24">
+          SSH Cluster Setup
+        </h3>
         <p><strong>Date:</strong> March 2024</p>
         <p><strong>Purpose:</strong> Automate secure SSH configuration via Termius to streamline access to Oregon State's CQLS servers.</p>
         <details>
@@ -60,11 +76,13 @@
 scp config.json user@cqls.osu.edu:/home/user/.ssh/
           </code></pre>
         </details>
-        <img src="assets/terminal-icon.png" alt="Terminal icon" width="40">
       </div>
 
       <div class="project-card">
-        <h3>Yield Calculator Script</h3>
+        <h3>
+          <img src="assets/icons8-terminal-64.png" alt="Terminal icon" width="24">
+          Yield Calculator Script
+        </h3>
         <p><strong>Date:</strong> January 2024</p>
         <p><strong>Purpose:</strong> Generate quick theoretical yield estimates from input molar ratios and desired product mass.</p>
         <details>
@@ -74,22 +92,22 @@ def calculate_yield(moles_reactant, theoretical_yield):
     return moles_reactant * theoretical_yield
           </code></pre>
         </details>
-        <img src="assets/terminal-icon.png" alt="Terminal icon" width="40">
       </div>
     </div>
 
     <!-- Visualization Projects -->
     <div id="visualizations" class="project-group" style="display: none;">
       <div class="project-card">
-        <h3>Repeat Length Distribution</h3>
+        <h3>
+          <img src="assets/icons8-eye-50.png" alt="Eye icon" width="24">
+          Repeat Length Distribution
+        </h3>
         <p><strong>Dataset & Origin:</strong> Summary table from EarlGrey output applied to contig group X23.</p>
         <p><strong>Purpose:</strong> Visualize distribution of genomic repeat lengths to identify potential divergence zones.</p>
-
         <details>
           <summary>Show Visualization</summary>
           <img src="assets/repeat-chart.png" alt="Repeat summary chart" width="100%" style="margin: 10px 0;">
         </details>
-
         <details>
           <summary>View R Script</summary>
           <pre><code>
@@ -102,15 +120,16 @@ ggplot(repeat_data, aes(x=RepeatLength)) +
       </div>
 
       <div class="project-card">
-        <h3>GC Content Scatter Plot</h3>
+        <h3>
+          <img src="assets/icons8-eye-50.png" alt="Eye icon" width="24">
+          GC Content Scatter Plot
+        </h3>
         <p><strong>Dataset & Origin:</strong> FASTA-derived summary file from curated gene pool sequences.</p>
         <p><strong>Purpose:</strong> Explore GC variation across scaffold positions to detect regulatory zones.</p>
-
         <details>
           <summary>Show Visualization</summary>
           <img src="assets/gc-content-plot.png" alt="GC content chart" width="100%" style="margin: 10px 0;">
         </details>
-
         <details>
           <summary>View R Script</summary>
           <pre><code>
