@@ -1,47 +1,39 @@
+:root {
+  --primary: #005b96;       /* Deep blue for links and accents */
+  --background-color: #f5faff;
+  --text-color: #222;
+  --link-color: #007acc;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 40px;
 }
 
+h1, h2, h3 {
+  color: var(--primary);
+}
+
 nav a {
-  color: #0066cc;
-  text-decoration: none;
-  margin-right: 15px;
+  color: var(--link-color);
   font-weight: bold;
+  text-decoration: none;
+  margin-right: 16px;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-h1 {
-  color: #003366;
-  margin-top: 0;
-}
-
-h2 {
-  color: #004080;
-}
-
-p {
-  max-width: 800px;
-}
-
 pre {
   background-color: #eef2f7;
   padding: 12px;
-  border-left: 4px solid #007acc;
+  border-left: 4px solid var(--primary);
   overflow-x: auto;
 }
 
 code {
   font-family: Consolas, monospace;
   font-size: 0.95em;
-  color: #333;
-}
-
-.code-project img {
-  margin-top: 10px;
 }
