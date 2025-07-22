@@ -112,20 +112,6 @@ nav a {
     width: auto;
     margin: 1rem auto;
   }
-}
-.dark-theme {
-  background-color: #121212;
-  color: #eee;
-}
-
-.dark-theme a {
-  color: #90caf9;
-}
-
-.theme-control {
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
-}
 
 /* Icon container for contact page */
 .contact-icon {
@@ -142,4 +128,23 @@ nav a {
 
 .contact-block {
   margin: 1rem 0;
+}
+
+/* ─── Light Theme Styling ─── */
+body {
+  background-color: #f8f9fc; /* soft off-white background */
+  color: #333333; /* charcoal grey body text */
+  font-family: system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  color: #002147; /* deep navy headers */
+}
+
+nav a {
+  color: #002147; /* navy for nav links */
+}
+
+a:hover {
+  text-decoration: underline;
 }
