@@ -72,18 +72,22 @@ a:hover {
 
 .button-link {
   display: inline-block;
-  background-color: #002147;   /* deep navy */
+  background-color: #002147;         /* deep navy base */
   color: #ffffff;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;              /* pill-shaped edges */
   text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15); /* subtle lift */
+  transition: all 0.25s ease;
 }
 
 .button-link:hover {
-  background-color: #0055aa;   /* lighter navy on hover */
-  transform: translateY(-1px); /* subtle lift */
+  background-color: #004080;         /* lighter navy hover */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
 }
 /* ─── Typography ─── */
 .site-title {
