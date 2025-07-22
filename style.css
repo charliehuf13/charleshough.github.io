@@ -1,100 +1,77 @@
-/* ───────────────────────────────────────────────────────── */
-/* Reset scroll, set base background color */
+/* ─── Reset and Base Layout ─── */
 html,
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #f5f5f5; /* change this hex to your preferred color */
+  font-family: system-ui, sans-serif;
+  background-color: #f8f9fc;     /* soft off-white */
+  color: #333333;                /* charcoal body text */
 }
 
-/* Navigation bar container */
+/* ─── Header and Nav Structure ─── */
 header {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Center & constrain content */
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 1rem;           /* side spacing */
+  padding: 0 1rem;
   box-sizing: border-box;
 }
 
-/* Flex layout for nav items */
 nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;                 /* space between items */
+  gap: 1rem;
   padding: 1rem 0;
 }
 
-/* Link styling */
 nav a {
   padding: 0.5rem 1rem;
   text-decoration: none;
-  color: #333;
-  white-space: nowrap;
+  color: #002147;                /* navy navigation links */
 }
 
-/* Toggle-switch styling */
-.toggle-switch {
-  display: flex;
-  align-items: center;
+nav a:hover {
+  text-decoration: underline;
 }
 
-/* Hide default checkbox */
-.toggle-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+/* ─── Typography ─── */
+.site-title {
+  color: #002147;                /* deep navy name */
+  margin-bottom: 0.25rem;
 }
 
-/* Custom slider */
-.toggle-switch .slider {
-  position: relative;
-  width: 50px;
-  height: 24px;
-  background-color: #ccc;
-  border-radius: 34px;
-  transition: background-color 0.3s;
-  cursor: pointer;
+h1, h2, h3, h4, h5, h6 {
+  color: #002147;
+  font-weight: 600;
 }
 
-/* Knob */
-.toggle-switch .slider::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  border-radius: 50%;
-  transition: transform 0.3s;
+p, li, a {
+  color: #333333;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-/* Checked state */
-.toggle-switch input:checked + .slider {
-  background-color: #4caf50;
+/* ─── Contact Page Icon Styling ─── */
+.contact-icon {
+  background-color: #fff8dc;     /* light cream backdrop */
+  padding: 0.4rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-right: 0.5rem;
 }
 
-.toggle-switch input:checked + .slider::before {
-  transform: translateX(26px);
+.contact-block {
+  margin: 1rem 0;
 }
 
-/* Toggle label */
-.toggle-switch label {
-  margin-left: 0.5rem;
-  font-size: 0.9rem;
-  color: #333;
-}
-
-/* ───────────────────────────────────────────────────────── */
-/* Mobile breakpoint: stack links, center toggles */
+/* ─── Responsive Layout ─── */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -106,69 +83,4 @@ nav a {
     width: 100%;
     text-align: center;
   }
-
-  /* keep toggles from spanning full width */
-  .toggle-switch {
-    width: auto;
-    margin: 1rem auto;
-  }
-
-/* Icon container for contact page */
-.contact-icon {
-  background-color: #fff8dc;
-  padding: 0.4rem;
-  border-radius: 8px;
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-
-.dark-theme .contact-icon {
-  background-color: #fff8dc;
-}
-
-.contact-block {
-  margin: 1rem 0;
-}
-
-/* ─── Light Theme Styling ─── */
-body {
-  background-color: #f8f9fc; /* soft off-white background */
-  color: #333333; /* charcoal grey body text */
-  font-family: system-ui, sans-serif;
-}
-
-h1, h2, h3, h4 {
-  color: #002147; /* deep navy headers */
-}
-
-nav a {
-  color: #002147; /* navy for nav links */
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ─── Site Theme ─── */
-body {
-  background-color: #f8f9fc;       /* soft off-white */
-  color: #333333;                  /* charcoal body text */
-  font-family: system-ui, sans-serif;
-}
-
-.site-title {
-  color: #002147;                  /* navy for main name/title */
-  margin-bottom: 0.25rem;
-}
-
-h2, h3, h4 {
-  color: #003366;                  /* slightly lighter navy for section headers */
-}
-
-nav a {
-  color: #002147;                  /* navy nav links */
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
