@@ -56,6 +56,19 @@ nav a.active::after {
   background-color: #002147; /* navy blue underline */
   border-radius: 2px;
 }
+
+/* ─── Link Styling ─── */
+a {
+  color: #003366; /* deep navy */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+a:hover {
+  color: #0055aa;               /* brighter on hover */
+  border-bottom: 2px solid #0055aa; /* subtle underline on hover */
+}
 /* ─── Typography ─── */
 .site-title {
   color: #002147;                /* deep navy name */
