@@ -398,3 +398,93 @@ a {
   font-size: 0.9em;
   overflow-x: auto;
 }
+
+/* Enhanced Project Styling */
+.project-meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.project-status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-status.ongoing {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #bbdefb;
+}
+
+.project-status.completed {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.project-date {
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.project-lab {
+  color: #002147;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.project-tech {
+  display: flex;
+  gap: 8px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background-color: #f1f3f4;
+  color: #5f6368;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 0.8em;
+  font-weight: 500;
+  border: 1px solid #e8eaed;
+}
+
+.project-outcomes {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #002147;
+  border-radius: 0 4px 4px 0;
+}
+
+.project-note {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.project-note p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 1.1em;
+}
+
+/* Active button styling */
+.project-nav button.active {
+  background-color: #002147;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 33, 71, 0.2);
+}

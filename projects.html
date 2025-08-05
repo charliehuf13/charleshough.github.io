@@ -27,14 +27,16 @@
   </header>
 
   <main class="container">
-    <h2>Projects</h2>
+    <h2>Research Projects</h2>
+    <p>Here's a collection of my computational biology and research projects, ranging from ongoing lab work to personal learning experiments.</p>
+    
     <div class="project-nav">
-      <button onclick="showCategory('personal-projects')">
-        <img src="assets/icons8-fast-track-50.png" alt="Personal icon" width="18" style="vertical-align: middle;">
-        Personal
+      <button onclick="showCategory('research-projects')" class="active">
+        <img src="assets/icons8-terminal-64.png" alt="Research icon" width="18" style="vertical-align: middle;">
+        Research
       </button>
       <button onclick="showCategory('computational-projects')">
-        <img src="assets/icons8-terminal-64.png" alt="Computational icon" width="18" style="vertical-align: middle;">
+        <img src="assets/icons8-fast-track-50.png" alt="Computational icon" width="18" style="vertical-align: middle;">
         Computational
       </button>
       <button onclick="showCategory('visualizations')">
@@ -44,24 +46,51 @@
       <button onclick="showCategory('all')">All Projects</button>
     </div>
 
-    <!-- Personal Projects -->
-    <div id="personal-projects" class="project-group">
+    <!-- Research Projects -->
+    <div id="research-projects" class="project-group">
       <div class="project-card">
         <h3>
-          <img src="assets/icons8-fast-track-50.png" alt="Personal icon" width="24">
-          Recrystallization Protocol Optimization
+          🧬 Phytophthora Genome Assembly & Annotation
         </h3>
-        <p><strong>Description:</strong> Refined workflow to reduce contamination and maximize yield during organic recrystallization.</p>
-        <p><strong>Takeaways:</strong> Lowered impurity rates by 20% through solvent optimization and temperature control improvements.</p>
+        <div class="project-meta">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-date">Fall 2024 - Present</span>
+          <span class="project-lab">Chang Lab, OSU</span>
+        </div>
+        <p><strong>Overview:</strong> Generating high-quality genome assemblies and comparative genomic analyses for Phytophthora species, focusing on plant-microbe interactions of agricultural and ecological importance.</p>
+        <p><strong>My Role:</strong> Running genome annotation pipelines, training machine learning models for species-specific annotation, and collaborating with postdoctoral researchers on comparative analyses.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Helixer</span>
+          <span class="tech-tag">BUSCO</span>
+          <span class="tech-tag">AGAT</span>
+          <span class="tech-tag">EarlGrey</span>
+          <span class="tech-tag">OMARK</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Key Learning:</strong> Genome annotation workflows, machine learning applications in genomics, collaborative research practices
+        </div>
       </div>
 
       <div class="project-card">
         <h3>
-          <img src="assets/icons8-fast-track-50.png" alt="Personal icon" width="24">
-          Distillation Yield Benchmark
+          🌿 Plant-Microbe Interaction Genomics
         </h3>
-        <p><strong>Description:</strong> Compared multiple solvent systems for fractional distillation efficiency under different heating conditions.</p>
-        <p><strong>Takeaways:</strong> Ethanol–acetone showed highest purity at reduced energy cost. Protocol adopted for teaching lab use.</p>
+        <div class="project-meta">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-date">Fall 2024 - Present</span>
+          <span class="project-lab">Chang Lab, OSU</span>
+        </div>
+        <p><strong>Overview:</strong> Investigating genomic mechanisms underlying plant-microbe interactions using comparative genomics and synteny analysis approaches.</p>
+        <p><strong>My Role:</strong> Utilizing GENESPACE, nf-core/pairgenomealign, and MUMmer for genome comparison and synteny analysis, contributing to research presentations and posters.</p>
+        <div class="project-tech">
+          <span class="tech-tag">GENESPACE</span>
+          <span class="tech-tag">nf-core</span>
+          <span class="tech-tag">MUMmer</span>
+          <span class="tech-tag">Nextflow</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Impact:</strong> Contributing to understanding of agriculturally important pathogen-plant interactions
+        </div>
       </div>
     </div>
 
@@ -69,34 +98,43 @@
     <div id="computational-projects" class="project-group" style="display: none;">
       <div class="project-card">
         <h3>
-          <img src="assets/icons8-terminal-64.png" alt="Terminal icon" width="24">
-          SSH Cluster Setup
+          💻 HPC Workflow Optimization
         </h3>
-        <p><strong>Date:</strong> March 2024</p>
-        <p><strong>Purpose:</strong> Automate secure SSH configuration via Termius to streamline access to Oregon State's CQLS servers.</p>
-        <details>
-          <summary>View Script</summary>
-          <pre><code>
-#!/bin/bash
-scp config.json user@cqls.osu.edu:/home/user/.ssh/
-          </code></pre>
-        </details>
+        <div class="project-meta">
+          <span class="project-status completed">Learning Project</span>
+          <span class="project-date">2024</span>
+        </div>
+        <p><strong>Overview:</strong> Learning to optimize computational workflows for high-performance computing environments, focusing on resource allocation and job scheduling.</p>
+        <p><strong>Skills Developed:</strong> SLURM-based HPC scheduling, Singularity containers, Linux/Unix command line operations, resource management.</p>
+        <div class="project-tech">
+          <span class="tech-tag">SLURM</span>
+          <span class="tech-tag">Singularity</span>
+          <span class="tech-tag">Linux</span>
+          <span class="tech-tag">Shell Scripting</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Learning Focus:</strong> Understanding computational resource management and workflow optimization
+        </div>
       </div>
 
       <div class="project-card">
         <h3>
-          <img src="assets/icons8-terminal-64.png" alt="Terminal icon" width="24">
-          Yield Calculator Script
+          🐍 Python for Molecular Biology
         </h3>
-        <p><strong>Date:</strong> January 2024</p>
-        <p><strong>Purpose:</strong> Generate quick theoretical yield estimates from input molar ratios and desired product mass.</p>
-        <details>
-          <summary>View Script</summary>
-          <pre><code>
-def calculate_yield(moles_reactant, theoretical_yield):
-    return moles_reactant * theoretical_yield
-          </code></pre>
-        </details>
+        <div class="project-meta">
+          <span class="project-status completed">Coursework</span>
+          <span class="project-date">BB 345</span>
+        </div>
+        <p><strong>Overview:</strong> Entry-level experience with Python programming applied to molecular biology problems and data analysis.</p>
+        <p><strong>Skills Developed:</strong> Basic Python programming, biological data manipulation, introductory bioinformatics concepts.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Bioinformatics</span>
+          <span class="tech-tag">Data Analysis</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Foundation:</strong> Building programming skills for computational biology applications
+        </div>
       </div>
     </div>
 
@@ -104,57 +142,70 @@ def calculate_yield(moles_reactant, theoretical_yield):
     <div id="visualizations" class="project-group" style="display: none;">
       <div class="project-card">
         <h3>
-          <img src="assets/icons8-eye-50.png" alt="Eye icon" width="24">
-          Repeat Length Distribution
+          📊 Phylogenetic Tree Visualizations
         </h3>
-        <p><strong>Dataset & Origin:</strong> Summary table from EarlGrey output applied to contig group X23.</p>
-        <p><strong>Purpose:</strong> Visualize distribution of genomic repeat lengths to identify potential divergence zones.</p>
-        <details>
-          <summary>Show Visualization</summary>
-          <img src="assets/repeat-chart.png" alt="Repeat summary chart" width="100%" style="margin: 10px 0;">
-        </details>
-        <details>
-          <summary>View R Script</summary>
-          <pre><code>
-repeat_data <- read.csv("summary_table.csv")
-ggplot(repeat_data, aes(x=RepeatLength)) +
-  geom_histogram(binwidth=5) +
-  theme_minimal()
-          </code></pre>
-        </details>
+        <div class="project-meta">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-date">2024</span>
+          <span class="project-lab">Chang Lab, OSU</span>
+        </div>
+        <p><strong>Overview:</strong> Creating publication-quality phylogenetic trees and evolutionary relationship visualizations using R and specialized packages.</p>
+        <p><strong>Tools & Methods:</strong> Developing skills in R tidyverse, ape, and ggtree for creating clear, informative phylogenetic visualizations for research presentations.</p>
+        <div class="project-tech">
+          <span class="tech-tag">R</span>
+          <span class="tech-tag">tidyverse</span>
+          <span class="tech-tag">ape</span>
+          <span class="tech-tag">ggtree</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Application:</strong> Supporting research presentations and contributing to lab visualization needs
+        </div>
       </div>
 
       <div class="project-card">
         <h3>
-          <img src="assets/icons8-eye-50.png" alt="Eye icon" width="24">
-          GC Content Scatter Plot
+          📈 Genome Annotation Visualizations
         </h3>
-        <p><strong>Dataset & Origin:</strong> FASTA-derived summary file from curated gene pool sequences.</p>
-        <p><strong>Purpose:</strong> Explore GC variation across scaffold positions to detect regulatory zones.</p>
-        <details>
-          <summary>Show Visualization</summary>
-          <img src="assets/gc-content-plot.png" alt="GC content chart" width="100%" style="margin: 10px 0;">
-        </details>
-        <details>
-          <summary>View R Script</summary>
-          <pre><code>
-gc_data <- read.csv("gc_summary.csv")
-ggplot(gc_data, aes(x=Position, y=GC)) +
-  geom_point(alpha=0.5) +
-  theme_light()
-          </code></pre>
-        </details>
+        <div class="project-meta">
+          <span class="project-status ongoing">Learning</span>
+          <span class="project-date">2024</span>
+        </div>
+        <p><strong>Overview:</strong> Learning to create repeat-density plots and genome annotation visualizations to better understand genomic structure and composition.</p>
+        <p><strong>Focus Areas:</strong> Developing skills in data visualization for genomic data, creating informative plots for research analysis and presentation.</p>
+        <div class="project-tech">
+          <span class="tech-tag">R</span>
+          <span class="tech-tag">ggplot2</span>
+          <span class="tech-tag">Data Visualization</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Goal:</strong> Supporting genomic research with clear, informative visualizations
+        </div>
       </div>
+    </div>
+
+    <div class="project-note">
+      <p><em>🚀 More projects coming soon as I continue learning and contributing to computational biology research!</em></p>
     </div>
   </main>
 
   <script>
     function showCategory(categoryId) {
+      // Update button states
+      const buttons = document.querySelectorAll('.project-nav button');
+      buttons.forEach(button => button.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      // Show/hide project groups
       const sections = document.querySelectorAll('.project-group');
       sections.forEach(section => {
         section.style.display = (categoryId === 'all' || section.id === categoryId) ? 'block' : 'none';
       });
     }
+    
+    // Show research projects by default
+    document.addEventListener('DOMContentLoaded', function() {
+      showCategory('research-projects');
+    });
   </script>
 </body>
 </html>
