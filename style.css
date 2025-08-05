@@ -386,6 +386,18 @@ a {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
+.project-card.featured {
+  border-left: 6px solid #002147;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.project-card.template {
+  background: #fafafa;
+  border-left: 4px dashed #ccc;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
 .project-card h3 {
   color: var(--primary);
   margin-bottom: 8px;
@@ -433,6 +445,12 @@ a {
   background-color: #fff3e0;
   color: #f57c00;
   border: 1px solid #ffcc02;
+}
+
+.project-status.pending {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+  border: 1px solid #ce93d8;
 }
 
 .project-date {

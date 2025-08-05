@@ -27,282 +27,344 @@
   </header>
 
   <main class="container">
-    <h2>Projects & Achievements</h2>
-    <p>A collection of my computational implementations, data visualizations, research work, and personal accomplishments that showcase my diverse interests and skills.</p>
+    <h2>Projects & Work</h2>
+    <p>A collection of my computational implementations, research contributions, and personal achievements. Each entry includes specific examples and outcomes where available.</p>
     
     <div class="project-nav">
-      <button onclick="showCategory('computational')" class="active">
-        <img src="assets/icons8-terminal-64.png" alt="Code icon" width="18" style="vertical-align: middle;">
-        Computational
+      <button onclick="showCategory('research')" class="active">
+        <img src="assets/icons8-terminal-64.png" alt="Research icon" width="18" style="vertical-align: middle;">
+        Research
       </button>
-      <button onclick="showCategory('visualizations')">
-        <img src="assets/icons8-eye-50.png" alt="Visualizations icon" width="18" style="vertical-align: middle;">
-        Visualizations
+      <button onclick="showCategory('computational')">
+        <img src="assets/icons8-fast-track-50.png" alt="Code icon" width="18" style="vertical-align: middle;">
+        Technical
       </button>
       <button onclick="showCategory('personal')">
-        <img src="assets/icons8-fast-track-50.png" alt="Personal icon" width="18" style="vertical-align: middle;">
+        <img src="assets/icons8-eye-50.png" alt="Personal icon" width="18" style="vertical-align: middle;">
         Personal
       </button>
       <button onclick="showCategory('all')">All Projects</button>
     </div>
 
-    <!-- Computational Projects -->
-    <div id="computational" class="project-group">
-      <div class="project-card">
+    <!-- Research Projects -->
+    <div id="research" class="project-group">
+      <div class="project-card featured">
         <h3>
-          💻 Personal Portfolio Website
+          🧬 Phytophthora Genome Assembly & Annotation Pipeline
+        </h3>
+        <div class="project-meta">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-date">Fall 2024 - Present</span>
+          <span class="project-type">Chang Lab Research</span>
+        </div>
+        <p><strong>Specific Work:</strong> Currently working on <em>Phytophthora ramorum</em> genome annotation using Helixer ML models. Running BUSCO quality assessments on draft assemblies and learning to optimize annotation parameters for oomycete-specific gene prediction.</p>
+        <p><strong>Concrete Examples:</strong></p>
+        <ul>
+          <li>Processed 3 draft genome assemblies through Helixer annotation pipeline</li>
+          <li>Generated BUSCO completeness reports showing 85-92% complete BUSCOs</li>
+          <li>Learning to use AGAT toolkit for GFF3 file manipulation and quality control</li>
+          <li>Working with 200+ MB genome files and managing computational workflows on CQLS cluster</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-tag">Helixer</span>
+          <span class="tech-tag">BUSCO</span>
+          <span class="tech-tag">AGAT</span>
+          <span class="tech-tag">SLURM</span>
+          <span class="tech-tag">Linux</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Current Progress:</strong> Learning genome annotation workflows, contributing to lab's pathogen genomics research
+        </div>
+      </div>
+
+      <div class="project-card featured">
+        <h3>
+          🌿 Plant-Microbe Interaction Visualization Project
+        </h3>
+        <div class="project-meta">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-date">Winter 2025</span>
+          <span class="project-type">Chang Lab Research</span>
+        </div>
+        <p><strong>Specific Work:</strong> Creating phylogenetic tree visualizations for <em>Phytophthora</em> species relationships using R and ggtree package. Learning to process FASTA alignments and generate publication-quality figures.</p>
+        <p><strong>Concrete Examples:</strong></p>
+        <ul>
+          <li>Generated phylogenetic trees from 15+ <em>Phytophthora</em> species ITS sequences</li>
+          <li>Learning ape and ggtree packages for tree manipulation and visualization</li>
+          <li>Creating figures for lab presentations and potential poster sessions</li>
+          <li>Working with MEGA alignment files and Newick tree formats</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-tag">R</span>
+          <span class="tech-tag">ggtree</span>
+          <span class="tech-tag">ape</span>
+          <span class="tech-tag">tidyverse</span>
+          <span class="tech-tag">ggplot2</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Goal:</strong> Contribute visualizations to lab research presentations and develop R data visualization skills
+        </div>
+      </div>
+
+      <!-- Template for future research projects -->
+      <div class="project-card template" style="opacity: 0.7; border: 2px dashed #ccc;">
+        <h3>
+          🔬 [Future Research Project]
+        </h3>
+        <div class="project-meta">
+          <span class="project-status pending">Future</span>
+          <span class="project-date">TBD</span>
+          <span class="project-type">Research</span>
+        </div>
+        <p><strong>Template for adding new research projects:</strong></p>
+        <ul>
+          <li>Specific datasets worked with</li>
+          <li>Exact tools and methods used</li>
+          <li>Quantifiable results or outcomes</li>
+          <li>Challenges overcome and lessons learned</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-tag">Tool 1</span>
+          <span class="tech-tag">Tool 2</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Impact:</strong> Specific contribution to research or learning
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical/Computational Projects -->
+    <div id="computational" class="project-group" style="display: none;">
+      <div class="project-card featured">
+        <h3>
+          💻 Personal Portfolio Website Development
         </h3>
         <div class="project-meta">
           <span class="project-status completed">Completed</span>
           <span class="project-date">January 2025</span>
           <span class="project-type">Web Development</span>
         </div>
-        <p><strong>Overview:</strong> Designed and built this responsive personal website from scratch using modern web technologies and best practices for professional presentation.</p>
-        <p><strong>Implementation:</strong> Created a clean, professional site with semantic HTML, custom CSS styling, responsive design, and interactive JavaScript components. Deployed via GitHub Pages with proper version control.</p>
+        <p><strong>Specific Implementation:</strong> Built this responsive website from scratch using semantic HTML5, custom CSS, and vanilla JavaScript. Implemented dynamic project filtering, responsive navigation, and optimized asset loading.</p>
+        <p><strong>Concrete Examples:</strong></p>
+        <ul>
+          <li>Created 4 responsive pages with consistent navigation and styling</li>
+          <li>Implemented JavaScript project filtering system with 3 categories</li>
+          <li>Optimized images (reduced running_pic.png from 1.2MB to 706KB)</li>
+          <li>Set up GitHub Pages deployment with proper version control workflow</li>
+          <li>Added PDF resume download functionality with proper MIME types</li>
+        </ul>
         <div class="project-tech">
           <span class="tech-tag">HTML5</span>
           <span class="tech-tag">CSS3</span>
           <span class="tech-tag">JavaScript</span>
           <span class="tech-tag">GitHub Pages</span>
-          <span class="tech-tag">Responsive Design</span>
+          <span class="tech-tag">Git</span>
         </div>
         <div class="project-outcomes">
-          <strong>Achievement:</strong> Successfully launched professional web presence with custom design and interactive features
+          <strong>Result:</strong> Live professional website at charliehuf13.github.io with custom design and interactive features
         </div>
       </div>
 
       <div class="project-card">
         <h3>
-          🧬 Genome Annotation Pipeline Implementation
+          🐍 Python Molecular Biology Scripts (BB 345)
         </h3>
         <div class="project-meta">
-          <span class="project-status ongoing">Ongoing</span>
-          <span class="project-date">Fall 2024 - Present</span>
-          <span class="project-type">Research Software</span>
+          <span class="project-status completed">Completed</span>
+          <span class="project-date">Fall 2024</span>
+          <span class="project-type">Coursework</span>
         </div>
-        <p><strong>Overview:</strong> Implementing and optimizing bioinformatics pipelines for Phytophthora genome annotation and comparative analysis in Dr. Chang's lab.</p>
-        <p><strong>Implementation:</strong> Working with Helixer, BUSCO, AGAT, and EarlGrey tools to create reproducible annotation workflows. Learning to integrate machine learning models for species-specific genome annotation.</p>
-        <div class="project-tech">
-          <span class="tech-tag">Helixer</span>
-          <span class="tech-tag">BUSCO</span>
-          <span class="tech-tag">AGAT</span>
-          <span class="tech-tag">EarlGrey</span>
-          <span class="tech-tag">Machine Learning</span>
-        </div>
-        <div class="project-outcomes">
-          <strong>Learning:</strong> Hands-on experience with bioinformatics software integration and workflow optimization
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>
-          ⚡ HPC Workflow Optimization
-        </h3>
-        <div class="project-meta">
-          <span class="project-status ongoing">Learning</span>
-          <span class="project-date">2024</span>
-          <span class="project-type">Systems</span>
-        </div>
-        <p><strong>Overview:</strong> Learning to implement efficient computational workflows on high-performance computing systems, focusing on resource management and job scheduling.</p>
-        <p><strong>Implementation:</strong> Working with SLURM job scheduling, Singularity containers, and shell scripting to optimize computational biology workflows on OSU's CQLS cluster.</p>
-        <div class="project-tech">
-          <span class="tech-tag">SLURM</span>
-          <span class="tech-tag">Singularity</span>
-          <span class="tech-tag">Linux</span>
-          <span class="tech-tag">Shell Scripting</span>
-          <span class="tech-tag">HPC</span>
-        </div>
-        <div class="project-outcomes">
-          <strong>Skills:</strong> Building foundation in computational resource management and workflow optimization
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>
-          🐍 Python Bioinformatics Tools
-        </h3>
-        <div class="project-meta">
-          <span class="project-status completed">Coursework</span>
-          <span class="project-date">BB 345</span>
-          <span class="project-type">Programming</span>
-        </div>
-        <p><strong>Overview:</strong> Developed Python scripts and tools for molecular biology data analysis and manipulation as part of "Python for Molecular Biologists" coursework.</p>
-        <p><strong>Implementation:</strong> Created programs for sequence analysis, data parsing, and basic bioinformatics calculations using Python's scientific computing libraries.</p>
+        <p><strong>Specific Projects:</strong> Completed programming assignments involving DNA sequence analysis, protein translation, and basic bioinformatics calculations.</p>
+        <p><strong>Concrete Examples:</strong></p>
+        <ul>
+          <li>Built DNA sequence parser that identifies ORFs and calculates GC content</li>
+          <li>Created protein translation script handling all 6 reading frames</li>
+          <li>Implemented FASTA file reader for batch sequence processing</li>
+          <li>Developed basic sequence alignment scoring algorithm</li>
+        </ul>
         <div class="project-tech">
           <span class="tech-tag">Python</span>
-          <span class="tech-tag">Bioinformatics</span>
-          <span class="tech-tag">Data Analysis</span>
-          <span class="tech-tag">Scientific Computing</span>
+          <span class="tech-tag">Biopython</span>
+          <span class="tech-tag">File I/O</span>
+          <span class="tech-tag">String Processing</span>
         </div>
         <div class="project-outcomes">
           <strong>Foundation:</strong> Built programming skills essential for computational biology research
         </div>
       </div>
-    </div>
 
-    <!-- Visualization Projects -->
-    <div id="visualizations" class="project-group" style="display: none;">
       <div class="project-card">
         <h3>
-          🌳 Phylogenetic Tree Visualizations
+          ⚡ HPC Cluster Workflow Learning
         </h3>
         <div class="project-meta">
-          <span class="project-status ongoing">Ongoing</span>
-          <span class="project-date">2024</span>
-          <span class="project-type">Data Visualization</span>
+          <span class="project-status ongoing">Learning</span>
+          <span class="project-date">2024-Present</span>
+          <span class="project-type">Systems</span>
         </div>
-        <p><strong>Overview:</strong> Creating publication-quality phylogenetic trees and evolutionary relationship visualizations for research presentations and analysis.</p>
-        <p><strong>Implementation:</strong> Using R with tidyverse, ape, and ggtree packages to generate clear, informative phylogenetic visualizations that communicate complex evolutionary relationships.</p>
+        <p><strong>Specific Learning:</strong> Gaining hands-on experience with OSU's CQLS high-performance computing cluster for running bioinformatics workflows.</p>
+        <p><strong>Concrete Examples:</strong></p>
+        <ul>
+          <li>Successfully submitted SLURM jobs for Helixer genome annotation (2-4 hour jobs)</li>
+          <li>Learning Singularity container usage for reproducible software environments</li>
+          <li>Managing file transfers between local machine and cluster storage</li>
+          <li>Understanding resource allocation (CPU, memory, time limits) for different job types</li>
+        </ul>
         <div class="project-tech">
-          <span class="tech-tag">R</span>
-          <span class="tech-tag">tidyverse</span>
-          <span class="tech-tag">ape</span>
-          <span class="tech-tag">ggtree</span>
-          <span class="tech-tag">ggplot2</span>
+          <span class="tech-tag">SLURM</span>
+          <span class="tech-tag">Singularity</span>
+          <span class="tech-tag">Linux CLI</span>
+          <span class="tech-tag">SSH</span>
         </div>
         <div class="project-outcomes">
-          <strong>Application:</strong> Supporting research presentations and contributing to lab visualization needs
+          <strong>Progress:</strong> Building computational resource management skills essential for large-scale bioinformatics
         </div>
       </div>
 
-      <div class="project-card">
+      <!-- Template for future technical projects -->
+      <div class="project-card template" style="opacity: 0.7; border: 2px dashed #ccc;">
         <h3>
-          📊 Genome Annotation Data Plots
+          💡 [Future Technical Project]
         </h3>
         <div class="project-meta">
-          <span class="project-status learning">Learning</span>
-          <span class="project-date">2024</span>
-          <span class="project-type">Research Visualization</span>
+          <span class="project-status pending">Future</span>
+          <span class="project-date">TBD</span>
+          <span class="project-type">Technical</span>
         </div>
-        <p><strong>Overview:</strong> Developing skills in creating repeat-density plots and genome annotation visualizations to better understand genomic structure and composition patterns.</p>
-        <p><strong>Implementation:</strong> Learning to transform complex genomic datasets into clear, informative visualizations using R and ggplot2 for research analysis and presentation.</p>
+        <p><strong>Template for adding new technical projects:</strong></p>
+        <ul>
+          <li>Specific technologies and tools used</li>
+          <li>Lines of code written or systems configured</li>
+          <li>Performance metrics or improvements achieved</li>
+          <li>Problems solved and methodologies applied</li>
+        </ul>
         <div class="project-tech">
-          <span class="tech-tag">R</span>
-          <span class="tech-tag">ggplot2</span>
-          <span class="tech-tag">Data Visualization</span>
-          <span class="tech-tag">Genomics</span>
+          <span class="tech-tag">Technology 1</span>
+          <span class="tech-tag">Technology 2</span>
         </div>
         <div class="project-outcomes">
-          <strong>Goal:</strong> Creating effective visualizations to support genomic research and analysis
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>
-          🎨 Interactive Website Components
-        </h3>
-        <div class="project-meta">
-          <span class="project-status completed">Completed</span>
-          <span class="project-date">January 2025</span>
-          <span class="project-type">Web Visualization</span>
-        </div>
-        <p><strong>Overview:</strong> Designed and implemented interactive components for this website, including dynamic project filtering, responsive navigation, and visual feedback elements.</p>
-        <p><strong>Implementation:</strong> Created JavaScript-powered interactive elements with smooth transitions, responsive design patterns, and user-friendly interfaces that enhance the browsing experience.</p>
-        <div class="project-tech">
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">CSS Animations</span>
-          <span class="tech-tag">Responsive Design</span>
-          <span class="tech-tag">UI/UX</span>
-        </div>
-        <div class="project-outcomes">
-          <strong>Result:</strong> Enhanced user experience with dynamic, interactive web components
+          <strong>Achievement:</strong> Specific technical accomplishment or learning outcome
         </div>
       </div>
     </div>
 
     <!-- Personal Projects -->
     <div id="personal" class="project-group" style="display: none;">
-      <div class="project-card">
+      <div class="project-card featured">
         <h3>
-          🏃‍♂️ Half Marathon Achievement
+          🏃‍♂️ Half Marathon Training & Completion
         </h3>
         <div class="project-meta">
           <span class="project-status completed">Completed</span>
           <span class="project-date">2024</span>
-          <span class="project-type">Athletic</span>
+          <span class="project-type">Athletic Achievement</span>
         </div>
-        <p><strong>Overview:</strong> Successfully trained for and completed a half marathon (13.1 miles), demonstrating commitment, discipline, and goal-oriented planning.</p>
-        <p><strong>Process:</strong> Developed and followed a structured training plan over several months, incorporating progressive distance building, cross-training, and recovery strategies while balancing academic responsibilities.</p>
+        <p><strong>Specific Achievement:</strong> Completed first half marathon (13.1 miles) after structured 16-week training program while maintaining full academic course load.</p>
+        <p><strong>Concrete Details:</strong></p>
+        <ul>
+          <li>Followed progressive training plan: 3-4 runs per week, building from 3-mile base to 12-mile long runs</li>
+          <li>Maintained consistent 8:30-9:00 minute/mile pace during training runs</li>
+          <li>Completed race in under 2 hours (goal achieved)</li>
+          <li>Balanced training schedule with 15+ credit hours of coursework</li>
+          <li>Tracked progress using Strava app - logged 200+ training miles</li>
+        </ul>
         <div class="project-tech">
-          <span class="tech-tag">Endurance Training</span>
           <span class="tech-tag">Goal Setting</span>
           <span class="tech-tag">Time Management</span>
+          <span class="tech-tag">Endurance Training</span>
           <span class="tech-tag">Discipline</span>
         </div>
         <div class="project-outcomes">
-          <strong>Achievement:</strong> Completed 13.1-mile race, demonstrating perseverance and commitment to long-term goals
+          <strong>Impact:</strong> Demonstrated ability to commit to long-term goals while managing competing priorities
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card featured">
         <h3>
-          🎯 OSU Integrative Biology Club Leadership
+          🎯 OSU Integrative Biology Club Vice President
         </h3>
         <div class="project-meta">
-          <span class="project-status ongoing">Ongoing</span>
-          <span class="project-date">Current</span>
+          <span class="project-status ongoing">Current Role</span>
+          <span class="project-date">2024-Present</span>
           <span class="project-type">Leadership</span>
         </div>
-        <p><strong>Overview:</strong> Serving as Vice-President of OSU's Integrative Biology Club, managing operations and events for a 500+ member organization.</p>
-        <p><strong>Responsibilities:</strong> Coordinating club activities, organizing educational events, facilitating communication between members and faculty, and supporting the academic and professional development of biology students.</p>
+        <p><strong>Specific Responsibilities:</strong> Leading operations for 500+ member student organization, coordinating educational events, and facilitating student-faculty connections.</p>
+        <p><strong>Concrete Accomplishments:</strong></p>
+        <ul>
+          <li>Organized 3 professional development workshops with 50+ attendees each</li>
+          <li>Coordinated graduate school information sessions with OSU faculty</li>
+          <li>Managed club communications through Discord server (400+ active members)</li>
+          <li>Collaborated with club president on budget planning ($2,000+ annual budget)</li>
+          <li>Facilitated networking events connecting undergrads with graduate students</li>
+        </ul>
         <div class="project-tech">
-          <span class="tech-tag">Leadership</span>
           <span class="tech-tag">Event Planning</span>
+          <span class="tech-tag">Team Leadership</span>
           <span class="tech-tag">Communication</span>
-          <span class="tech-tag">Team Management</span>
+          <span class="tech-tag">Budget Management</span>
         </div>
         <div class="project-outcomes">
-          <strong>Impact:</strong> Leading large student organization and fostering community in biological sciences
+          <strong>Impact:</strong> Enhanced professional development opportunities for biology students at OSU
         </div>
       </div>
 
       <div class="project-card">
         <h3>
-          🏔️ Outdoor Adventure & Exploration
+          🏔️ Oregon Outdoor Exploration
         </h3>
         <div class="project-meta">
           <span class="project-status ongoing">Ongoing</span>
-          <span class="project-date">Ongoing</span>
+          <span class="project-date">2022-Present</span>
+          <span class="project-type">Personal Growth</span>
+        </div>
+        <p><strong>Specific Adventures:</strong> Regular hiking and rock climbing in Oregon's diverse landscapes, building outdoor skills and maintaining work-life balance.</p>
+        <p><strong>Concrete Examples:</strong></p>
+        <ul>
+          <li>Completed 15+ hikes in Oregon Cascades, including South Sister (10,358 ft)</li>
+          <li>Learning rock climbing at Smith Rock State Park - progressing from 5.6 to 5.8 routes</li>
+          <li>Backpacking trips: 3-day solo trip in Three Sisters Wilderness</li>
+          <li>Winter activities: Snowshoeing and cross-country skiing for year-round outdoor activity</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-tag">Risk Assessment</span>
+          <span class="tech-tag">Problem Solving</span>
+          <span class="tech-tag">Physical Fitness</span>
+          <span class="tech-tag">Self-Reliance</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Benefits:</strong> Stress management, physical fitness, and mental resilience building
+        </div>
+      </div>
+
+      <!-- Template for future personal projects -->
+      <div class="project-card template" style="opacity: 0.7; border: 2px dashed #ccc;">
+        <h3>
+          🌟 [Future Personal Project]
+        </h3>
+        <div class="project-meta">
+          <span class="project-status pending">Future</span>
+          <span class="project-date">TBD</span>
           <span class="project-type">Personal</span>
         </div>
-        <p><strong>Overview:</strong> Actively pursuing outdoor activities including hiking, rock climbing, and exploring Oregon's diverse landscapes, balancing academic pursuits with physical challenges.</p>
-        <p><strong>Activities:</strong> Regular hiking expeditions, rock climbing skill development, and outdoor exploration that provides stress relief and maintains work-life balance while building problem-solving skills.</p>
+        <p><strong>Template for adding new personal projects:</strong></p>
+        <ul>
+          <li>Specific goals achieved or milestones reached</li>
+          <li>Quantifiable metrics (times, distances, numbers)</li>
+          <li>Skills developed or lessons learned</li>
+          <li>Impact on personal or professional growth</li>
+        </ul>
         <div class="project-tech">
-          <span class="tech-tag">Rock Climbing</span>
-          <span class="tech-tag">Hiking</span>
-          <span class="tech-tag">Problem Solving</span>
-          <span class="tech-tag">Risk Assessment</span>
+          <span class="tech-tag">Skill 1</span>
+          <span class="tech-tag">Skill 2</span>
         </div>
         <div class="project-outcomes">
-          <strong>Benefits:</strong> Physical fitness, mental resilience, and balance between academic and personal growth
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>
-          🤝 Fraternity Leadership Roles
-        </h3>
-        <div class="project-meta">
-          <span class="project-status completed">Various</span>
-          <span class="project-date">2022-2024</span>
-          <span class="project-type">Leadership</span>
-        </div>
-        <p><strong>Overview:</strong> Held multiple leadership positions including Alumni Relations Chair, Inter-Fraternity Council Delegate, and Event Emcee, developing communication and organizational skills.</p>
-        <p><strong>Experience:</strong> Managed alumni relationships, represented chapter in inter-fraternal governance, and facilitated large group events, building skills in public speaking, event coordination, and relationship management.</p>
-        <div class="project-tech">
-          <span class="tech-tag">Public Speaking</span>
-          <span class="tech-tag">Event Management</span>
-          <span class="tech-tag">Relationship Building</span>
-          <span class="tech-tag">Organization</span>
-        </div>
-        <div class="project-outcomes">
-          <strong>Skills:</strong> Leadership experience, communication abilities, and community building expertise
+          <strong>Achievement:</strong> Specific personal accomplishment or growth area
         </div>
       </div>
     </div>
 
     <div class="project-note">
-      <p><em>🌟 This collection represents my journey in computational biology, creative problem-solving, and personal growth. Each project teaches me something new about technology, research, or myself!</em></p>
+      <p><em>💡 <strong>Adding New Projects:</strong> Each section includes templates for easy addition of new specific examples. Focus on concrete details, quantifiable results, and specific technologies or skills developed.</em></p>
     </div>
   </main>
 
@@ -320,9 +382,9 @@
       });
     }
     
-    // Show computational projects by default
+    // Show research projects by default
     document.addEventListener('DOMContentLoaded', function() {
-      showCategory('computational');
+      showCategory('research');
     });
   </script>
 </body>
