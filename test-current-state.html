@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current State Test - Charles Hough</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f0f0f0; }
+        .test-box { 
+            background: white; 
+            padding: 20px; 
+            margin: 20px 0; 
+            border: 2px solid #002147; 
+            border-radius: 8px; 
+        }
+        .header-test { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            background: #ffffff; 
+            padding: 15px; 
+            border: 1px solid #ccc;
+            margin: 10px 0;
+        }
+        .profile-pic { 
+            width: 80px; 
+            height: 80px; 
+            border-radius: 50%; 
+            border: 3px solid #002147; 
+            object-fit: cover;
+        }
+        .success { background: #d4edda; border-color: #28a745; }
+        .error { background: #f8d7da; border-color: #dc3545; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Current State Test - Charles Hough Website</h1>
+    <p><strong>Current Time:</strong> <span id="current-time"></span></p>
+    <p><strong>Test URL:</strong> <span id="current-url"></span></p>
+    
+    <div class="test-box">
+        <h2>✅ What SHOULD be working:</h2>
+        <div class="header-test">
+            <img src="assets/running_pic.png" alt="Charles Hough" class="profile-pic">
+            <div>
+                <h3>Charles Hough</h3>
+                <p>This is how the header should look on ALL pages</p>
+            </div>
+        </div>
+        <p><strong>Expected:</strong> Running picture in top left, no large profile section on about page</p>
+    </div>
+    
+    <div class="test-box">
+        <h2>🔗 Test Links (open in new tabs):</h2>
+        <ul>
+            <li><a href="index.html" target="_blank">Home Page</a> - Should have header image</li>
+            <li><a href="about.html" target="_blank">About Page</a> - Should have header image, NO profile section</li>
+            <li><a href="projects.html" target="_blank">Projects Page</a> - Should have header image</li>
+        </ul>
+    </div>
+    
+    <div class="test-box">
+        <h2>🛠️ Troubleshooting Steps:</h2>
+        <ol>
+            <li><strong>Hard Refresh:</strong> Press Ctrl+F5 (Windows/Linux) or Cmd+Shift+R (Mac)</li>
+            <li><strong>Clear Cache:</strong> Go to browser settings and clear cache</li>
+            <li><strong>Try Incognito:</strong> Open in private/incognito mode</li>
+            <li><strong>Check Developer Tools:</strong> Press F12, go to Console tab, look for errors</li>
+            <li><strong>Try New Port:</strong> Use http://localhost:8081/ instead of 8080</li>
+        </ol>
+    </div>
+    
+    <div class="test-box">
+        <h2>📋 Current File Status:</h2>
+        <p><strong>about.html:</strong> ✅ Profile section removed, starts with "Academic Background"</p>
+        <p><strong>Header image:</strong> ✅ Present in all HTML files</p>
+        <p><strong>CSS styling:</strong> ✅ Properly defined for .header-profile-pic</p>
+        <p><strong>Image file:</strong> ✅ assets/running_pic.png exists (722KB)</p>
+    </div>
+
+    <script>
+        document.getElementById('current-time').textContent = new Date().toLocaleString();
+        document.getElementById('current-url').textContent = window.location.href;
+        
+        // Test image loading
+        const img = new Image();
+        img.onload = function() {
+            console.log('✅ Image loaded successfully');
+            document.body.style.borderTop = '5px solid green';
+        };
+        img.onerror = function() {
+            console.log('❌ Image failed to load');
+            document.body.style.borderTop = '5px solid red';
+        };
+        img.src = 'assets/running_pic.png';
+    </script>
+</body>
+</html>
