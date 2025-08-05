@@ -38,6 +38,8 @@ header {
   border: 3px solid #002147;
   box-shadow: 0 2px 8px rgba(0, 33, 71, 0.2);
   flex-shrink: 0;
+  display: block;
+  max-width: none;
 }
 
 .header-text {
