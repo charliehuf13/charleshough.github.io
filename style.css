@@ -24,22 +24,30 @@ header {
 
 /* ─── Header Content Layout ─── */
 .header-content {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1rem 0 0.5rem 0;
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+  padding: 1rem 0 0.5rem 0 !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(0, 33, 71, 0.1) !important;
+  min-height: 100px !important;
 }
 
 .header-profile-pic {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #002147;
-  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.2);
-  flex-shrink: 0;
-  display: block;
-  max-width: none;
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 3px solid #002147 !important;
+  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.2) !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+  max-width: none !important;
+  min-width: 80px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 10 !important;
 }
 
 .header-text {

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Debug - Charles Hough</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .debug-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #002147;
+            background: #f8f9fa;
+        }
+        .debug-box {
+            background: yellow;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px dashed red;
+        }
+        .success { background: lightgreen !important; }
+        .error { background: lightcoral !important; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Image Debug Page</h1>
+    
+    <div class="debug-section">
+        <h2>Test 1: Direct Image (No CSS Framework)</h2>
+        <div class="debug-box">
+            <img src="assets/running_pic.png" alt="Direct test" style="width: 100px; height: 100px; border: 3px solid red;">
+            <p>This should show the image with a red border</p>
+        </div>
+    </div>
+    
+    <div class="debug-section">
+        <h2>Test 2: Exact Header Structure (With Pico CSS)</h2>
+        <div class="debug-box">
+            <header>
+                <div class="container">
+                    <div class="header-content">
+                        <img src="assets/running_pic.png" alt="Charles Hough" class="header-profile-pic" />
+                        <div class="header-text">
+                            <h1 class="site-title">Charles Hough</h1>
+                            <p>This should show the header image</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    
+    <div class="debug-section">
+        <h2>Test 3: Image with Inline Styles Override</h2>
+        <div class="debug-box">
+            <img src="assets/running_pic.png" alt="Inline test" style="width: 80px !important; height: 80px !important; border-radius: 50% !important; border: 3px solid blue !important; display: block !important;">
+            <p>This uses inline styles to override everything</p>
+        </div>
+    </div>
+    
+    <div class="debug-section">
+        <h2>🔍 Debug Information</h2>
+        <div id="debug-info">
+            <p><strong>Current URL:</strong> <span id="url"></span></p>
+            <p><strong>Image Load Status:</strong> <span id="img-status">Testing...</span></p>
+            <p><strong>CSS Applied:</strong> <span id="css-status">Checking...</span></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('url').textContent = window.location.href;
+        
+        // Test image loading
+        const img = new Image();
+        const statusSpan = document.getElementById('img-status');
+        
+        img.onload = function() {
+            statusSpan.textContent = '✅ Image loads successfully';
+            statusSpan.className = 'success';
+            console.log('✅ Image loaded:', this.src);
+        };
+        
+        img.onerror = function() {
+            statusSpan.textContent = '❌ Image failed to load';
+            statusSpan.className = 'error';
+            console.log('❌ Image failed to load:', this.src);
+        };
+        
+        img.src = 'assets/running_pic.png';
+        
+        // Check if CSS is applied
+        setTimeout(() => {
+            const headerImg = document.querySelector('.header-profile-pic');
+            const cssSpan = document.getElementById('css-status');
+            
+            if (headerImg) {
+                const styles = window.getComputedStyle(headerImg);
+                const width = styles.width;
+                const display = styles.display;
+                const visibility = styles.visibility;
+                
+                cssSpan.innerHTML = `Width: ${width}, Display: ${display}, Visibility: ${visibility}`;
+                
+                if (width === '80px' && display === 'block') {
+                    cssSpan.className = 'success';
+                } else {
+                    cssSpan.className = 'error';
+                }
+                
+                console.log('CSS Debug:', {
+                    width: width,
+                    height: styles.height,
+                    display: display,
+                    visibility: visibility,
+                    opacity: styles.opacity,
+                    position: styles.position
+                });
+            } else {
+                cssSpan.textContent = '❌ Header image element not found';
+                cssSpan.className = 'error';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
