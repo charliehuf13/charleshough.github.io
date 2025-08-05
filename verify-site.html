@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Verification - Charles Hough</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .verify-section { 
+            background: white; 
+            margin: 20px 0; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .status { padding: 5px 10px; border-radius: 4px; font-weight: bold; margin: 5px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .warning { background: #fff3cd; color: #856404; }
+        iframe { width: 100%; height: 200px; border: 2px solid #ddd; margin: 10px 0; }
+        .nav-check { display: flex; gap: 10px; flex-wrap: wrap; }
+        .nav-link { padding: 8px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; }
+        .nav-link:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Site Verification - Charles Hough</h1>
+    <p><strong>Current Time:</strong> <span id="timestamp"></span></p>
+    
+    <div class="verify-section">
+        <h2>📋 Current Site Structure</h2>
+        <p><strong>Expected Pages:</strong> 4 pages total</p>
+        <div class="nav-check">
+            <a href="index.html" class="nav-link" target="_blank">🏠 Home</a>
+            <a href="about.html" class="nav-link" target="_blank">👤 About</a>
+            <a href="projects.html" class="nav-link" target="_blank">💼 Projects</a>
+            <a href="contact.html" class="nav-link" target="_blank">📧 Contact</a>
+        </div>
+        <p><strong>❌ Removed:</strong> Journal page (should return 404)</p>
+        <a href="journal.html" class="nav-link" target="_blank" style="background: #dc3545;">📖 Journal (Should 404)</a>
+    </div>
+    
+    <div class="verify-section">
+        <h2>🎯 Profile Image Check</h2>
+        <p><strong>Expected:</strong> 100px circular image, zoomed in on center, consistent across all pages</p>
+        <div style="display: flex; align-items: center; gap: 15px; background: #f8f9fa; padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+            <img src="assets/running_pic.png" alt="Reference" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; object-position: center center; border: 3px solid #002147; transform: scale(1.3);">
+            <div>
+                <h4 style="margin: 0;">Expected Appearance</h4>
+                <p style="margin: 5px 0 0 0; color: #666;">100px, circular, zoomed in, navy border</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="verify-section">
+        <h2>🧹 Cache Clearing Instructions</h2>
+        <div class="status warning">
+            If you're seeing old content, try these steps:
+        </div>
+        <ol>
+            <li><strong>Hard Refresh:</strong> Ctrl+F5 (Windows/Linux) or Cmd+Shift+R (Mac)</li>
+            <li><strong>Clear Browser Cache:</strong> Settings → Privacy → Clear browsing data</li>
+            <li><strong>Incognito Mode:</strong> Open in private/incognito window</li>
+            <li><strong>Different Browser:</strong> Try Chrome, Firefox, Safari, Edge</li>
+            <li><strong>Wait:</strong> GitHub Pages can take 2-5 minutes to update</li>
+        </ol>
+    </div>
+    
+    <div class="verify-section">
+        <h2>📊 Navigation Test</h2>
+        <p><strong>Each page should have exactly 4 navigation links:</strong></p>
+        <ul>
+            <li>Home</li>
+            <li>About Me</li>
+            <li>Projects</li>
+            <li>Contact</li>
+            <li>📄 Resume (download button)</li>
+        </ul>
+        <div class="status error">
+            ❌ NO "Journal" link should appear anywhere
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+        
+        // Add cache-busting parameter to current page URL
+        const currentUrl = window.location.href;
+        const cacheBust = '?v=' + Date.now();
+        
+        // Test image loading
+        const img = new Image();
+        img.onload = function() {
+            console.log('✅ Profile image loads successfully');
+        };
+        img.onerror = function() {
+            console.log('❌ Profile image failed to load');
+        };
+        img.src = 'assets/running_pic.png' + cacheBust;
+    </script>
+</body>
+</html>
