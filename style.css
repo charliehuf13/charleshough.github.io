@@ -9,6 +9,108 @@ body {
   color: #333333;                /* charcoal body text */
 }
 
+/* ─── Professional Photo Styles ─── */
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin: 2rem auto;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.profile-section {
+  text-align: center;
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Resume Download Button Styles ─── */
+.resume-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #002147 0%, #1a365d 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.3);
+  margin: 1.5rem 0;
+  border: none;
+  cursor: pointer;
+}
+
+.resume-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 33, 71, 0.4);
+  background: linear-gradient(135deg, #1a365d 0%, #2d4a6b 100%);
+  color: white;
+  text-decoration: none;
+}
+
+.resume-download:active {
+  transform: translateY(0);
+}
+
+.resume-download::before {
+  content: "📄";
+  font-size: 1.2rem;
+}
+
+.resume-info {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.cta-section {
+  text-align: center;
+  margin: 3rem 0;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #f8f9fc 0%, #e8f2ff 100%);
+  border-radius: 12px;
+  border: 2px solid #e1e8f0;
+}
+
+.cta-section h3 {
+  color: #002147;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+/* ─── Header Enhancement for Photo ─── */
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* ─── Header and Nav Structure ─── */
 header {
   background-color: #ffffff;
@@ -137,6 +239,21 @@ p, li, a {
     display: block;
     width: 100%;
     text-align: center;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .header-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .resume-download {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
   }
 }
 
