@@ -22,6 +22,58 @@ header {
   box-sizing: border-box;
 }
 
+/* ─── Header Content Layout ─── */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.header-profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #002147;
+  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.2);
+  flex-shrink: 0;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-text h1 {
+  margin: 0 0 0.25rem 0;
+}
+
+.header-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666666;
+  font-style: italic;
+}
+
+/* ─── Responsive Header ─── */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  
+  .header-profile-pic {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .header-text {
+    text-align: center;
+  }
+}
+
 /* ─── Profile Section ─── */
 .profile-section {
   display: flex;
