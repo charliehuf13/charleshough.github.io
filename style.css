@@ -396,6 +396,7 @@ a {
   background: #fafafa;
   border-left: 4px dashed #ccc;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  display: none; /* Hide templates from public view */
 }
 
 .project-card h3 {
