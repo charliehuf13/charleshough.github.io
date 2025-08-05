@@ -22,6 +22,82 @@ header {
   box-sizing: border-box;
 }
 
+/* ─── Profile Section ─── */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #002147;
+  box-shadow: 0 4px 12px rgba(0, 33, 71, 0.2);
+}
+
+.profile-intro h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #002147;
+}
+
+.profile-intro p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #666666;
+  font-style: italic;
+}
+
+/* ─── Resume Section ─── */
+.resume-section {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #002147;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.resume-section p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.resume-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.resume-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 33, 71, 0.3);
+}
+
+/* ─── Responsive Profile Section ─── */
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
