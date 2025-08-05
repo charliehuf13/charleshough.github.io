@@ -27,113 +27,115 @@
   </header>
 
   <main class="container">
-    <h2>Research Projects</h2>
-    <p>Here's a collection of my computational biology and research projects, ranging from ongoing lab work to personal learning experiments.</p>
+    <h2>Projects & Achievements</h2>
+    <p>A collection of my computational implementations, data visualizations, research work, and personal accomplishments that showcase my diverse interests and skills.</p>
     
     <div class="project-nav">
-      <button onclick="showCategory('research-projects')" class="active">
-        <img src="assets/icons8-terminal-64.png" alt="Research icon" width="18" style="vertical-align: middle;">
-        Research
-      </button>
-      <button onclick="showCategory('computational-projects')">
-        <img src="assets/icons8-fast-track-50.png" alt="Computational icon" width="18" style="vertical-align: middle;">
+      <button onclick="showCategory('computational')" class="active">
+        <img src="assets/icons8-terminal-64.png" alt="Code icon" width="18" style="vertical-align: middle;">
         Computational
       </button>
       <button onclick="showCategory('visualizations')">
         <img src="assets/icons8-eye-50.png" alt="Visualizations icon" width="18" style="vertical-align: middle;">
         Visualizations
       </button>
+      <button onclick="showCategory('personal')">
+        <img src="assets/icons8-fast-track-50.png" alt="Personal icon" width="18" style="vertical-align: middle;">
+        Personal
+      </button>
       <button onclick="showCategory('all')">All Projects</button>
     </div>
 
-    <!-- Research Projects -->
-    <div id="research-projects" class="project-group">
+    <!-- Computational Projects -->
+    <div id="computational" class="project-group">
       <div class="project-card">
         <h3>
-          🧬 Phytophthora Genome Assembly & Annotation
+          💻 Personal Portfolio Website
+        </h3>
+        <div class="project-meta">
+          <span class="project-status completed">Completed</span>
+          <span class="project-date">January 2025</span>
+          <span class="project-type">Web Development</span>
+        </div>
+        <p><strong>Overview:</strong> Designed and built this responsive personal website from scratch using modern web technologies and best practices for professional presentation.</p>
+        <p><strong>Implementation:</strong> Created a clean, professional site with semantic HTML, custom CSS styling, responsive design, and interactive JavaScript components. Deployed via GitHub Pages with proper version control.</p>
+        <div class="project-tech">
+          <span class="tech-tag">HTML5</span>
+          <span class="tech-tag">CSS3</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">GitHub Pages</span>
+          <span class="tech-tag">Responsive Design</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Achievement:</strong> Successfully launched professional web presence with custom design and interactive features
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>
+          🧬 Genome Annotation Pipeline Implementation
         </h3>
         <div class="project-meta">
           <span class="project-status ongoing">Ongoing</span>
           <span class="project-date">Fall 2024 - Present</span>
-          <span class="project-lab">Chang Lab, OSU</span>
+          <span class="project-type">Research Software</span>
         </div>
-        <p><strong>Overview:</strong> Generating high-quality genome assemblies and comparative genomic analyses for Phytophthora species, focusing on plant-microbe interactions of agricultural and ecological importance.</p>
-        <p><strong>My Role:</strong> Running genome annotation pipelines, training machine learning models for species-specific annotation, and collaborating with postdoctoral researchers on comparative analyses.</p>
+        <p><strong>Overview:</strong> Implementing and optimizing bioinformatics pipelines for Phytophthora genome annotation and comparative analysis in Dr. Chang's lab.</p>
+        <p><strong>Implementation:</strong> Working with Helixer, BUSCO, AGAT, and EarlGrey tools to create reproducible annotation workflows. Learning to integrate machine learning models for species-specific genome annotation.</p>
         <div class="project-tech">
           <span class="tech-tag">Helixer</span>
           <span class="tech-tag">BUSCO</span>
           <span class="tech-tag">AGAT</span>
           <span class="tech-tag">EarlGrey</span>
-          <span class="tech-tag">OMARK</span>
+          <span class="tech-tag">Machine Learning</span>
         </div>
         <div class="project-outcomes">
-          <strong>Key Learning:</strong> Genome annotation workflows, machine learning applications in genomics, collaborative research practices
+          <strong>Learning:</strong> Hands-on experience with bioinformatics software integration and workflow optimization
         </div>
       </div>
 
       <div class="project-card">
         <h3>
-          🌿 Plant-Microbe Interaction Genomics
+          ⚡ HPC Workflow Optimization
         </h3>
         <div class="project-meta">
-          <span class="project-status ongoing">Ongoing</span>
-          <span class="project-date">Fall 2024 - Present</span>
-          <span class="project-lab">Chang Lab, OSU</span>
-        </div>
-        <p><strong>Overview:</strong> Investigating genomic mechanisms underlying plant-microbe interactions using comparative genomics and synteny analysis approaches.</p>
-        <p><strong>My Role:</strong> Utilizing GENESPACE, nf-core/pairgenomealign, and MUMmer for genome comparison and synteny analysis, contributing to research presentations and posters.</p>
-        <div class="project-tech">
-          <span class="tech-tag">GENESPACE</span>
-          <span class="tech-tag">nf-core</span>
-          <span class="tech-tag">MUMmer</span>
-          <span class="tech-tag">Nextflow</span>
-        </div>
-        <div class="project-outcomes">
-          <strong>Impact:</strong> Contributing to understanding of agriculturally important pathogen-plant interactions
-        </div>
-      </div>
-    </div>
-
-    <!-- Computational Projects -->
-    <div id="computational-projects" class="project-group" style="display: none;">
-      <div class="project-card">
-        <h3>
-          💻 HPC Workflow Optimization
-        </h3>
-        <div class="project-meta">
-          <span class="project-status completed">Learning Project</span>
+          <span class="project-status ongoing">Learning</span>
           <span class="project-date">2024</span>
+          <span class="project-type">Systems</span>
         </div>
-        <p><strong>Overview:</strong> Learning to optimize computational workflows for high-performance computing environments, focusing on resource allocation and job scheduling.</p>
-        <p><strong>Skills Developed:</strong> SLURM-based HPC scheduling, Singularity containers, Linux/Unix command line operations, resource management.</p>
+        <p><strong>Overview:</strong> Learning to implement efficient computational workflows on high-performance computing systems, focusing on resource management and job scheduling.</p>
+        <p><strong>Implementation:</strong> Working with SLURM job scheduling, Singularity containers, and shell scripting to optimize computational biology workflows on OSU's CQLS cluster.</p>
         <div class="project-tech">
           <span class="tech-tag">SLURM</span>
           <span class="tech-tag">Singularity</span>
           <span class="tech-tag">Linux</span>
           <span class="tech-tag">Shell Scripting</span>
+          <span class="tech-tag">HPC</span>
         </div>
         <div class="project-outcomes">
-          <strong>Learning Focus:</strong> Understanding computational resource management and workflow optimization
+          <strong>Skills:</strong> Building foundation in computational resource management and workflow optimization
         </div>
       </div>
 
       <div class="project-card">
         <h3>
-          🐍 Python for Molecular Biology
+          🐍 Python Bioinformatics Tools
         </h3>
         <div class="project-meta">
           <span class="project-status completed">Coursework</span>
           <span class="project-date">BB 345</span>
+          <span class="project-type">Programming</span>
         </div>
-        <p><strong>Overview:</strong> Entry-level experience with Python programming applied to molecular biology problems and data analysis.</p>
-        <p><strong>Skills Developed:</strong> Basic Python programming, biological data manipulation, introductory bioinformatics concepts.</p>
+        <p><strong>Overview:</strong> Developed Python scripts and tools for molecular biology data analysis and manipulation as part of "Python for Molecular Biologists" coursework.</p>
+        <p><strong>Implementation:</strong> Created programs for sequence analysis, data parsing, and basic bioinformatics calculations using Python's scientific computing libraries.</p>
         <div class="project-tech">
           <span class="tech-tag">Python</span>
           <span class="tech-tag">Bioinformatics</span>
           <span class="tech-tag">Data Analysis</span>
+          <span class="tech-tag">Scientific Computing</span>
         </div>
         <div class="project-outcomes">
-          <strong>Foundation:</strong> Building programming skills for computational biology applications
+          <strong>Foundation:</strong> Built programming skills essential for computational biology research
         </div>
       </div>
     </div>
@@ -142,20 +144,21 @@
     <div id="visualizations" class="project-group" style="display: none;">
       <div class="project-card">
         <h3>
-          📊 Phylogenetic Tree Visualizations
+          🌳 Phylogenetic Tree Visualizations
         </h3>
         <div class="project-meta">
           <span class="project-status ongoing">Ongoing</span>
           <span class="project-date">2024</span>
-          <span class="project-lab">Chang Lab, OSU</span>
+          <span class="project-type">Data Visualization</span>
         </div>
-        <p><strong>Overview:</strong> Creating publication-quality phylogenetic trees and evolutionary relationship visualizations using R and specialized packages.</p>
-        <p><strong>Tools & Methods:</strong> Developing skills in R tidyverse, ape, and ggtree for creating clear, informative phylogenetic visualizations for research presentations.</p>
+        <p><strong>Overview:</strong> Creating publication-quality phylogenetic trees and evolutionary relationship visualizations for research presentations and analysis.</p>
+        <p><strong>Implementation:</strong> Using R with tidyverse, ape, and ggtree packages to generate clear, informative phylogenetic visualizations that communicate complex evolutionary relationships.</p>
         <div class="project-tech">
           <span class="tech-tag">R</span>
           <span class="tech-tag">tidyverse</span>
           <span class="tech-tag">ape</span>
           <span class="tech-tag">ggtree</span>
+          <span class="tech-tag">ggplot2</span>
         </div>
         <div class="project-outcomes">
           <strong>Application:</strong> Supporting research presentations and contributing to lab visualization needs
@@ -164,27 +167,142 @@
 
       <div class="project-card">
         <h3>
-          📈 Genome Annotation Visualizations
+          📊 Genome Annotation Data Plots
         </h3>
         <div class="project-meta">
-          <span class="project-status ongoing">Learning</span>
+          <span class="project-status learning">Learning</span>
           <span class="project-date">2024</span>
+          <span class="project-type">Research Visualization</span>
         </div>
-        <p><strong>Overview:</strong> Learning to create repeat-density plots and genome annotation visualizations to better understand genomic structure and composition.</p>
-        <p><strong>Focus Areas:</strong> Developing skills in data visualization for genomic data, creating informative plots for research analysis and presentation.</p>
+        <p><strong>Overview:</strong> Developing skills in creating repeat-density plots and genome annotation visualizations to better understand genomic structure and composition patterns.</p>
+        <p><strong>Implementation:</strong> Learning to transform complex genomic datasets into clear, informative visualizations using R and ggplot2 for research analysis and presentation.</p>
         <div class="project-tech">
           <span class="tech-tag">R</span>
           <span class="tech-tag">ggplot2</span>
           <span class="tech-tag">Data Visualization</span>
+          <span class="tech-tag">Genomics</span>
         </div>
         <div class="project-outcomes">
-          <strong>Goal:</strong> Supporting genomic research with clear, informative visualizations
+          <strong>Goal:</strong> Creating effective visualizations to support genomic research and analysis
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>
+          🎨 Interactive Website Components
+        </h3>
+        <div class="project-meta">
+          <span class="project-status completed">Completed</span>
+          <span class="project-date">January 2025</span>
+          <span class="project-type">Web Visualization</span>
+        </div>
+        <p><strong>Overview:</strong> Designed and implemented interactive components for this website, including dynamic project filtering, responsive navigation, and visual feedback elements.</p>
+        <p><strong>Implementation:</strong> Created JavaScript-powered interactive elements with smooth transitions, responsive design patterns, and user-friendly interfaces that enhance the browsing experience.</p>
+        <div class="project-tech">
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">CSS Animations</span>
+          <span class="tech-tag">Responsive Design</span>
+          <span class="tech-tag">UI/UX</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Result:</strong> Enhanced user experience with dynamic, interactive web components
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal Projects -->
+    <div id="personal" class="project-group" style="display: none;">
+      <div class="project-card">
+        <h3>
+          🏃‍♂️ Half Marathon Achievement
+        </h3>
+        <div class="project-meta">
+          <span class="project-status completed">Completed</span>
+          <span class="project-date">2024</span>
+          <span class="project-type">Athletic</span>
+        </div>
+        <p><strong>Overview:</strong> Successfully trained for and completed a half marathon (13.1 miles), demonstrating commitment, discipline, and goal-oriented planning.</p>
+        <p><strong>Process:</strong> Developed and followed a structured training plan over several months, incorporating progressive distance building, cross-training, and recovery strategies while balancing academic responsibilities.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Endurance Training</span>
+          <span class="tech-tag">Goal Setting</span>
+          <span class="tech-tag">Time Management</span>
+          <span class="tech-tag">Discipline</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Achievement:</strong> Completed 13.1-mile race, demonstrating perseverance and commitment to long-term goals
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>
+          🎯 OSU Integrative Biology Club Leadership
+        </h3>
+        <div class="project-meta">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-date">Current</span>
+          <span class="project-type">Leadership</span>
+        </div>
+        <p><strong>Overview:</strong> Serving as Vice-President of OSU's Integrative Biology Club, managing operations and events for a 500+ member organization.</p>
+        <p><strong>Responsibilities:</strong> Coordinating club activities, organizing educational events, facilitating communication between members and faculty, and supporting the academic and professional development of biology students.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Leadership</span>
+          <span class="tech-tag">Event Planning</span>
+          <span class="tech-tag">Communication</span>
+          <span class="tech-tag">Team Management</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Impact:</strong> Leading large student organization and fostering community in biological sciences
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>
+          🏔️ Outdoor Adventure & Exploration
+        </h3>
+        <div class="project-meta">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-date">Ongoing</span>
+          <span class="project-type">Personal</span>
+        </div>
+        <p><strong>Overview:</strong> Actively pursuing outdoor activities including hiking, rock climbing, and exploring Oregon's diverse landscapes, balancing academic pursuits with physical challenges.</p>
+        <p><strong>Activities:</strong> Regular hiking expeditions, rock climbing skill development, and outdoor exploration that provides stress relief and maintains work-life balance while building problem-solving skills.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Rock Climbing</span>
+          <span class="tech-tag">Hiking</span>
+          <span class="tech-tag">Problem Solving</span>
+          <span class="tech-tag">Risk Assessment</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Benefits:</strong> Physical fitness, mental resilience, and balance between academic and personal growth
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>
+          🤝 Fraternity Leadership Roles
+        </h3>
+        <div class="project-meta">
+          <span class="project-status completed">Various</span>
+          <span class="project-date">2022-2024</span>
+          <span class="project-type">Leadership</span>
+        </div>
+        <p><strong>Overview:</strong> Held multiple leadership positions including Alumni Relations Chair, Inter-Fraternity Council Delegate, and Event Emcee, developing communication and organizational skills.</p>
+        <p><strong>Experience:</strong> Managed alumni relationships, represented chapter in inter-fraternal governance, and facilitated large group events, building skills in public speaking, event coordination, and relationship management.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Public Speaking</span>
+          <span class="tech-tag">Event Management</span>
+          <span class="tech-tag">Relationship Building</span>
+          <span class="tech-tag">Organization</span>
+        </div>
+        <div class="project-outcomes">
+          <strong>Skills:</strong> Leadership experience, communication abilities, and community building expertise
         </div>
       </div>
     </div>
 
     <div class="project-note">
-      <p><em>🚀 More projects coming soon as I continue learning and contributing to computational biology research!</em></p>
+      <p><em>🌟 This collection represents my journey in computational biology, creative problem-solving, and personal growth. Each project teaches me something new about technology, research, or myself!</em></p>
     </div>
   </main>
 
@@ -202,9 +320,9 @@
       });
     }
     
-    // Show research projects by default
+    // Show computational projects by default
     document.addEventListener('DOMContentLoaded', function() {
-      showCategory('research-projects');
+      showCategory('computational');
     });
   </script>
 </body>
