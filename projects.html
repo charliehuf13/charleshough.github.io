@@ -27,245 +27,374 @@
   </header>
 
   <main class="container">
-    <h2>Projects & Work</h2>
-    <p>A collection of my computational implementations, research contributions, and personal achievements. Each entry includes specific examples and outcomes where available.</p>
+    <div class="projects-header">
+      <h2>Projects & Work</h2>
+      <p class="projects-subtitle">A collection of my computational implementations, research contributions, and personal achievements. Each entry includes specific examples and outcomes where available.</p>
+    </div>
     
-    <!-- Research Projects -->
-    <div class="project-card featured">
-      <h3>
-        🧬 Phytophthora Genome Assembly & Annotation Pipeline
-      </h3>
-      <div class="project-meta">
-        <span class="project-status ongoing">Ongoing</span>
-        <span class="project-date">Fall 2024 - Present</span>
-        <span class="project-type">Chang Lab Research</span>
+    <!-- Project Filters -->
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="research">Research</button>
+      <button class="filter-btn" data-filter="technical">Technical</button>
+      <button class="filter-btn" data-filter="leadership">Leadership</button>
+      <button class="filter-btn" data-filter="personal">Personal</button>
+    </div>
+
+    <div class="projects-grid" id="projects-container">
+      <!-- Research Projects -->
+      <div class="project-card featured" data-category="research">
+        <div class="project-header">
+          <h3>🧬 Phytophthora Genome Assembly & Annotation Pipeline</h3>
+          <div class="project-meta">
+            <span class="project-status ongoing">Ongoing</span>
+            <span class="project-date">Fall 2024 - Present</span>
+            <span class="project-type">Chang Lab Research</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <p><strong>Specific Work:</strong> Currently working on <em>Phytophthora ramorum</em> genome annotation using Helixer ML models. Running BUSCO quality assessments on draft assemblies and learning to optimize annotation parameters for oomycete-specific gene prediction.</p>
+          
+          <div class="project-highlights">
+            <h4>Concrete Examples:</h4>
+            <ul>
+              <li>Processed 3 draft genome assemblies through Helixer annotation pipeline</li>
+              <li>Generated BUSCO completeness reports showing 85-92% complete BUSCOs</li>
+              <li>Learning to use AGAT toolkit for GFF3 file manipulation and quality control</li>
+              <li>Working with 200+ MB genome files and managing computational workflows on CQLS cluster</li>
+            </ul>
+          </div>
+          
+          <div class="project-tech">
+            <span class="tech-tag">Helixer</span>
+            <span class="tech-tag">BUSCO</span>
+            <span class="tech-tag">AGAT</span>
+            <span class="tech-tag">SLURM</span>
+            <span class="tech-tag">Linux</span>
+          </div>
+          
+          <div class="project-outcomes">
+            <strong>Current Progress:</strong> Learning genome annotation workflows, contributing to lab's pathogen genomics research
+          </div>
+        </div>
       </div>
-      <p><strong>Specific Work:</strong> Currently working on <em>Phytophthora ramorum</em> genome annotation using Helixer ML models. Running BUSCO quality assessments on draft assemblies and learning to optimize annotation parameters for oomycete-specific gene prediction.</p>
-      <p><strong>Concrete Examples:</strong></p>
-      <ul>
-        <li>Processed 3 draft genome assemblies through Helixer annotation pipeline</li>
-        <li>Generated BUSCO completeness reports showing 85-92% complete BUSCOs</li>
-        <li>Learning to use AGAT toolkit for GFF3 file manipulation and quality control</li>
-        <li>Working with 200+ MB genome files and managing computational workflows on CQLS cluster</li>
-      </ul>
-      <div class="project-tech">
-        <span class="tech-tag">Helixer</span>
-        <span class="tech-tag">BUSCO</span>
-        <span class="tech-tag">AGAT</span>
-        <span class="tech-tag">SLURM</span>
-        <span class="tech-tag">Linux</span>
+
+      <!-- Technical Projects -->
+      <div class="project-card featured" data-category="technical">
+        <div class="project-header">
+          <h3>💻 Personal Portfolio Website Development</h3>
+          <div class="project-meta">
+            <span class="project-status completed">Completed</span>
+            <span class="project-date">January 2025</span>
+            <span class="project-type">Web Development</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <p><strong>Specific Implementation:</strong> Built this responsive website from scratch using semantic HTML5, custom CSS, and vanilla JavaScript. Implemented dynamic project filtering, responsive navigation, and optimized asset loading.</p>
+          
+          <div class="project-highlights">
+            <h4>Concrete Examples:</h4>
+            <ul>
+              <li>Created 4 responsive pages with consistent navigation and styling</li>
+              <li>Implemented JavaScript project filtering system with 5 categories</li>
+              <li>Set up GitHub Pages deployment with proper version control workflow</li>
+              <li>Added PDF resume download functionality with proper MIME types</li>
+            </ul>
+          </div>
+          
+          <div class="project-tech">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">GitHub Pages</span>
+            <span class="tech-tag">Git</span>
+          </div>
+          
+          <div class="project-outcomes">
+            <strong>Result:</strong> Live professional website at charliehuf13.github.io with custom design and interactive features
+          </div>
+        </div>
       </div>
-      <div class="project-outcomes">
-        <strong>Current Progress:</strong> Learning genome annotation workflows, contributing to lab's pathogen genomics research
+
+      <div class="project-card" data-category="technical">
+        <div class="project-header">
+          <h3>⚡ HPC Cluster Workflow Learning</h3>
+          <div class="project-meta">
+            <span class="project-status learning">Learning</span>
+            <span class="project-date">2024-Present</span>
+            <span class="project-type">Systems</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <p><strong>Specific Learning:</strong> Gaining hands-on experience with OSU's CQLS high-performance computing cluster for running bioinformatics workflows.</p>
+          
+          <div class="project-highlights">
+            <h4>Concrete Examples:</h4>
+            <ul>
+              <li>Successfully submitted SLURM jobs for Helixer genome annotation (2-4 hour jobs)</li>
+              <li>Learning Singularity container usage for reproducible software environments</li>
+              <li>Managing file transfers between local machine and cluster storage</li>
+              <li>Understanding resource allocation (CPU, memory, time limits) for different job types</li>
+            </ul>
+          </div>
+          
+          <div class="project-tech">
+            <span class="tech-tag">SLURM</span>
+            <span class="tech-tag">Singularity</span>
+            <span class="tech-tag">Linux CLI</span>
+            <span class="tech-tag">SSH</span>
+          </div>
+          
+          <div class="project-outcomes">
+            <strong>Progress:</strong> Building computational resource management skills essential for large-scale bioinformatics
+          </div>
+        </div>
+      </div>
+
+      <!-- Leadership Projects -->
+      <div class="project-card featured" data-category="leadership">
+        <div class="project-header">
+          <h3>🎯 OSU Integrative Biology Club Vice President</h3>
+          <div class="project-meta">
+            <span class="project-status ongoing">Current Role</span>
+            <span class="project-date">2024-Present</span>
+            <span class="project-type">Leadership</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <p><strong>Specific Responsibilities:</strong> Leading operations for 500+ member student organization, coordinating educational events, and facilitating student-faculty connections.</p>
+          
+          <div class="project-highlights">
+            <h4>Concrete Accomplishments:</h4>
+            <ul>
+              <li>Organized 3 professional development workshops with 50+ attendees each</li>
+              <li>Coordinated graduate school information sessions with OSU faculty</li>
+              <li>Managed club communications through Discord server (400+ active members)</li>
+              <li>Collaborated with club president on budget planning ($2,000+ annual budget)</li>
+              <li>Facilitated networking events connecting undergrads with graduate students and faculty</li>
+            </ul>
+          </div>
+          
+          <div class="project-tech">
+            <span class="tech-tag">Event Planning</span>
+            <span class="tech-tag">Team Leadership</span>
+            <span class="tech-tag">Communication</span>
+            <span class="tech-tag">Budget Management</span>
+          </div>
+          
+          <div class="project-outcomes">
+            <strong>Impact:</strong> Enhanced professional development and community engagement opportunities for biology students at OSU
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card featured" data-category="leadership">
+        <div class="project-header">
+          <h3>📚 Volunteer Biology Tutoring & Student Mentorship</h3>
+          <div class="project-meta">
+            <span class="project-status ongoing">Ongoing</span>
+            <span class="project-date">2023-Present</span>
+            <span class="project-type">Educational Service</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <p><strong>Specific Contribution:</strong> Leveraging experience as Learning Assistant for OSU's introductory biology series (BI 221, 222, 223) to provide free tutoring and academic support to struggling students.</p>
+          
+          <div class="project-highlights">
+            <h4>Concrete Impact Metrics:</h4>
+            <ul>
+              <li><strong>Students helped:</strong> Over 50 individual students across multiple terms</li>
+              <li><strong>Session formats:</strong> Large group study sessions, small group workshops, and personalized 1-on-1 tutoring</li>
+              <li><strong>Course coverage:</strong> BI 221 (Cell Biology), BI 222 (Genetics), BI 223 (Evolution & Ecology)</li>
+              <li><strong>Service model:</strong> Completely free of charge, focused on accessibility and student success</li>
+              <li>Developed personalized study strategies and exam preparation techniques for diverse learning styles</li>
+            </ul>
+          </div>
+          
+          <div class="project-tech">
+            <span class="tech-tag">Peer Education</span>
+            <span class="tech-tag">Communication</span>
+            <span class="tech-tag">Curriculum Development</span>
+            <span class="tech-tag">Student Support</span>
+            <span class="tech-tag">Mentorship</span>
+          </div>
+          
+          <div class="project-outcomes">
+            <strong>Impact:</strong> Enhanced academic success for biology students while developing teaching and communication skills and honing my own skills and knowledge
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal Projects -->
+      <div class="project-card featured" data-category="personal">
+        <div class="project-header">
+          <h3>🏃‍♂️ Half Marathon Training & Performance Achievement</h3>
+          <div class="project-meta">
+            <span class="project-status completed">Completed</span>
+            <span class="project-date">July - September 2024</span>
+            <span class="project-type">Athletic Achievement</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <p><strong>Specific Achievement:</strong> Transformed from recreational runner to competitive half-marathoner, achieving significant performance improvements through structured training while maintaining full academic course load.</p>
+          
+          <div class="project-highlights">
+            <h4>Concrete Performance Metrics:</h4>
+            <ul>
+              <li><strong>Starting baseline:</strong> 3-mile maximum distance at 8:30 min/mile pace (July 2024)</li>
+              <li><strong>Race performance:</strong> 13.1 miles completed in 1:41:34 (7:45 min/mile pace) - September 2024</li>
+              <li><strong>Improvement:</strong> 45-second per mile pace improvement over 10-week training period</li>
+              <li>Progressive training plan: 4-5 runs per week, building from 3-mile base to 12-mile long runs</li>
+              <li>Balanced intensive training with 15+ credit hours of challenging coursework</li>
+              <li><strong>Current status:</strong> Continuing running as regular fitness hobby and stress management</li>
+            </ul>
+          </div>
+          
+          <div class="project-tech">
+            <span class="tech-tag">Performance Analytics</span>
+            <span class="tech-tag">Goal Setting</span>
+            <span class="tech-tag">Time Management</span>
+            <span class="tech-tag">Endurance Training</span>
+            <span class="tech-tag">Discipline</span>
+          </div>
+          
+          <div class="project-outcomes">
+            <strong>Impact:</strong> Demonstrated ability to achieve measurable performance improvements while managing competing academic, personal, and professional priorities
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card featured" data-category="personal">
+        <div class="project-header">
+          <h3>🎧 Amateur Disc Jockey & Music Curation</h3>
+          <div class="project-meta">
+            <span class="project-status ongoing">Ongoing</span>
+            <span class="project-date">2023-Present</span>
+            <span class="project-type">Creative & Technical</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <p><strong>Specific Development:</strong> Exploring electronic music production and live mixing through software and hardware mastery, while building performance experience across diverse venues and audiences.</p>
+          
+          <div class="project-highlights">
+            <h4>Concrete Experience & Skills:</h4>
+            <ul>
+              <li><strong>Technical proficiency:</strong> Learning DJ mixing software, hardware controllers, and audio equipment setup</li>
+              <li><strong>Performance venues:</strong> Large social gatherings, OSU club events, and intimate social gatherings</li>
+              <li><strong>Music curation:</strong> Developing specialized playlists for different occasions, demographics, and event types</li>
+              <li><strong>Audience engagement:</strong> Reading crowd energy and adapting musical selections in real-time</li>
+              <li>Building understanding of audio engineering, beatmatching, and seamless transitions</li>
+              <li>Developing event coordination skills and client communication for bookings</li>
+            </ul>
+          </div>
+          
+          <div class="project-tech">
+            <span class="tech-tag">Audio Software</span>
+            <span class="tech-tag">Hardware Setup</span>
+            <span class="tech-tag">Event Coordination</span>
+            <span class="tech-tag">Music Curation</span>
+            <span class="tech-tag">Performance</span>
+          </div>
+          
+          <div class="project-outcomes">
+            <strong>Benefits:</strong> Creative outlet, technical skill development, and event management experience
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="personal">
+        <div class="project-header">
+          <h3>🏔️ Oregon Outdoor Exploration</h3>
+          <div class="project-meta">
+            <span class="project-status ongoing">Ongoing</span>
+            <span class="project-date">2022-Present</span>
+            <span class="project-type">Personal Growth</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <p><strong>Specific Adventures:</strong> Regular hiking and rock climbing in Oregon's diverse landscapes, building outdoor skills and maintaining work-life balance.</p>
+          
+          <div class="project-highlights">
+            <h4>Concrete Examples:</h4>
+            <ul>
+              <li>Completed 15+ hikes in Oregon Cascades, including South Sister (10,358 ft)</li>
+              <li>Learning rock climbing at Smith Rock State Park - progressing from 5.6 to 5.8 routes</li>
+              <li>Backpacking trips: 3-day solo trip in Three Sisters Wilderness</li>
+            </ul>
+          </div>
+          
+          <div class="project-tech">
+            <span class="tech-tag">Risk Assessment</span>
+            <span class="tech-tag">Problem Solving</span>
+            <span class="tech-tag">Physical Fitness</span>
+            <span class="tech-tag">Self-Reliance</span>
+          </div>
+          
+          <div class="project-outcomes">
+            <strong>Benefits:</strong> Stress management, physical fitness, appreciation for the outdoors/PNW and mental resilience building
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Technical Projects -->
-    <div class="project-card featured">
-      <h3>
-        💻 Personal Portfolio Website Development
-      </h3>
-      <div class="project-meta">
-        <span class="project-status completed">Completed</span>
-        <span class="project-date">January 2025</span>
-        <span class="project-type">Web Development</span>
-      </div>
-      <p><strong>Specific Implementation:</strong> Built this responsive website from scratch using semantic HTML5, custom CSS, and vanilla JavaScript. Implemented dynamic project filtering, responsive navigation, and optimized asset loading.</p>
-      <p><strong>Concrete Examples:</strong></p>
-      <ul>
-        <li>Created 4 responsive pages with consistent navigation and styling</li>
-        <li>Implemented JavaScript project filtering system with 3 categories</li>
-        <li>Set up GitHub Pages deployment with proper version control workflow</li>
-        <li>Added PDF resume download functionality with proper MIME types</li>
-      </ul>
-      <div class="project-tech">
-        <span class="tech-tag">HTML5</span>
-        <span class="tech-tag">CSS3</span>
-        <span class="tech-tag">JavaScript</span>
-        <span class="tech-tag">GitHub Pages</span>
-        <span class="tech-tag">Git</span>
-      </div>
-      <div class="project-outcomes">
-        <strong>Result:</strong> Live professional website at charliehuf13.github.io with custom design and interactive features
-      </div>
-    </div>
-
-    <div class="project-card">
-      <h3>
-        ⚡ HPC Cluster Workflow Learning
-      </h3>
-      <div class="project-meta">
-        <span class="project-status ongoing">Learning</span>
-        <span class="project-date">2024-Present</span>
-        <span class="project-type">Systems</span>
-      </div>
-      <p><strong>Specific Learning:</strong> Gaining hands-on experience with OSU's CQLS high-performance computing cluster for running bioinformatics workflows.</p>
-      <p><strong>Concrete Examples:</strong></p>
-      <ul>
-        <li>Successfully submitted SLURM jobs for Helixer genome annotation (2-4 hour jobs)</li>
-        <li>Learning Singularity container usage for reproducible software environments</li>
-        <li>Managing file transfers between local machine and cluster storage</li>
-        <li>Understanding resource allocation (CPU, memory, time limits) for different job types</li>
-      </ul>
-      <div class="project-tech">
-        <span class="tech-tag">SLURM</span>
-        <span class="tech-tag">Singularity</span>
-        <span class="tech-tag">Linux CLI</span>
-        <span class="tech-tag">SSH</span>
-      </div>
-      <div class="project-outcomes">
-        <strong>Progress:</strong> Building computational resource management skills essential for large-scale bioinformatics
-      </div>
-    </div>
-
-    <!-- Personal Projects -->
-    <div class="project-card featured">
-      <h3>
-        🏃‍♂️ Half Marathon Training & Performance Achievement
-      </h3>
-      <div class="project-meta">
-        <span class="project-status completed">Completed</span>
-        <span class="project-date">July - September 2024</span>
-        <span class="project-type">Athletic Achievement</span>
-      </div>
-      <p><strong>Specific Achievement:</strong> Transformed from recreational runner to competitive half-marathoner, achieving significant performance improvements through structured training while maintaining full academic course load.</p>
-      <p><strong>Concrete Performance Metrics:</strong></p>
-      <ul>
-        <li><strong>Starting baseline:</strong> 3-mile maximum distance at 8:30 min/mile pace (July 2024)</li>
-        <li><strong>Race performance:</strong> 13.1 miles completed in 1:41:34 (7:45 min/mile pace) - September 2024</li>
-        <li><strong>Improvement:</strong> 45-second per mile pace improvement over 10-week training period</li>
-        <li>Progressive training plan: 4-5 runs per week, building from 3-mile base to 12-mile long runs</li>
-        <li>Balanced intensive training with 15+ credit hours of challenging coursework</li>
-        <li><strong>Current status:</strong> Continuing running as regular fitness hobby and stress management</li>
-      </ul>
-      <div class="project-tech">
-        <span class="tech-tag">Performance Analytics</span>
-        <span class="tech-tag">Goal Setting</span>
-        <span class="tech-tag">Time Management</span>
-        <span class="tech-tag">Endurance Training</span>
-        <span class="tech-tag">Discipline</span>
-      </div>
-      <div class="project-outcomes">
-        <strong>Impact:</strong> Demonstrated ability to achieve measurable performance improvements while managing competing academic, personal, and professional priorities
-      </div>
-    </div>
-
-    <div class="project-card featured">
-      <h3>
-        🎯 OSU Integrative Biology Club Vice President
-      </h3>
-      <div class="project-meta">
-        <span class="project-status ongoing">Current Role</span>
-        <span class="project-date">2024-Present</span>
-        <span class="project-type">Leadership</span>
-      </div>
-      <p><strong>Specific Responsibilities:</strong> Leading operations for 500+ member student organization, coordinating educational events, and facilitating student-faculty connections.</p>
-      <p><strong>Concrete Accomplishments:</strong></p>
-      <ul>
-        <li>Organized 3 professional development workshops with 50+ attendees each</li>
-        <li>Coordinated graduate school information sessions with OSU faculty</li>
-        <li>Managed club communications through Discord server (400+ active members)</li>
-        <li>Collaborated with club president on budget planning ($2,000+ annual budget)</li>
-        <li>Facilitated networking events connecting undergrads with graduate students and faculty</li>
-      </ul>
-      <div class="project-tech">
-        <span class="tech-tag">Event Planning</span>
-        <span class="tech-tag">Team Leadership</span>
-        <span class="tech-tag">Communication</span>
-        <span class="tech-tag">Budget Management</span>
-      </div>
-      <div class="project-outcomes">
-        <strong>Impact:</strong> Enhanced professional development and community engagement opportunities for biology students at OSU
-      </div>
-    </div>
-
-    <div class="project-card featured">
-      <h3>
-        📚 Volunteer Biology Tutoring & Student Mentorship
-      </h3>
-      <div class="project-meta">
-        <span class="project-status ongoing">Ongoing</span>
-        <span class="project-date">2023-Present</span>
-        <span class="project-type">Educational Service</span>
-      </div>
-      <p><strong>Specific Contribution:</strong> Leveraging experience as Learning Assistant for OSU's introductory biology series (BI 221, 222, 223) to provide free tutoring and academic support to struggling students.</p>
-      <p><strong>Concrete Impact Metrics:</strong></p>
-      <ul>
-        <li><strong>Students helped:</strong> Over 50 individual students across multiple terms</li>
-        <li><strong>Session formats:</strong> Large group study sessions, small group workshops, and personalized 1-on-1 tutoring</li>
-        <li><strong>Course coverage:</strong> BI 221 (Cell Biology), BI 222 (Genetics), BI 223 (Evolution & Ecology)</li>
-        <li><strong>Service model:</strong> Completely free of charge, focused on accessibility and student success</li>
-        <li>Developed personalized study strategies and exam preparation techniques for diverse learning styles</li>
-      </ul>
-      <div class="project-tech">
-        <span class="tech-tag">Peer Education</span>
-        <span class="tech-tag">Communication</span>
-        <span class="tech-tag">Curriculum Development</span>
-        <span class="tech-tag">Student Support</span>
-        <span class="tech-tag">Mentorship</span>
-      </div>
-      <div class="project-outcomes">
-        <strong>Impact:</strong> Enhanced academic success for biology students while developing teaching and communication skills and honing my own skills and knowledge
-      </div>
-    </div>
-
-    <div class="project-card featured">
-      <h3>
-        🎧 Amateur Disc Jockey & Music Curation
-      </h3>
-      <div class="project-meta">
-        <span class="project-status ongoing">Ongoing</span>
-        <span class="project-date">2023-Present</span>
-        <span class="project-type">Creative & Technical</span>
-      </div>
-      <p><strong>Specific Development:</strong> Exploring electronic music production and live mixing through software and hardware mastery, while building performance experience across diverse venues and audiences.</p>
-      <p><strong>Concrete Experience & Skills:</strong></p>
-      <ul>
-        <li><strong>Technical proficiency:</strong> Learning DJ mixing software, hardware controllers, and audio equipment setup</li>
-        <li><strong>Performance venues:</strong> Large social gatherings, OSU club events, and intimate social gatherings</li>
-        <li><strong>Music curation:</strong> Developing specialized playlists for different occasions, demographics, and event types</li>
-        <li><strong>Audience engagement:</strong> Reading crowd energy and adapting musical selections in real-time</li>
-        <li>Building understanding of audio engineering, beatmatching, and seamless transitions</li>
-        <li>Developing event coordination skills and client communication for bookings</li>
-      </ul>
-      <div class="project-tech">
-        <span class="tech-tag">Audio Software</span>
-        <span class="tech-tag">Hardware Setup</span>
-        <span class="tech-tag">Event Coordination</span>
-        <span class="tech-tag">Music Curation</span>
-        <span class="tech-tag">Performance</span>
-      </div>
-      <div class="project-outcomes">
-        <strong>Benefits:</strong> Creative outlet, technical skill development, and event management experience
-      </div>
-    </div>
-
-    <div class="project-card">
-      <h3>
-        🏔️ Oregon Outdoor Exploration
-      </h3>
-      <div class="project-meta">
-        <span class="project-status ongoing">Ongoing</span>
-        <span class="project-date">2022-Present</span>
-        <span class="project-type">Personal Growth</span>
-      </div>
-      <p><strong>Specific Adventures:</strong> Regular hiking and rock climbing in Oregon's diverse landscapes, building outdoor skills and maintaining work-life balance.</p>
-      <p><strong>Concrete Examples:</strong></p>
-      <ul>
-        <li>Completed 15+ hikes in Oregon Cascades, including South Sister (10,358 ft)</li>
-        <li>Learning rock climbing at Smith Rock State Park - progressing from 5.6 to 5.8 routes</li>
-        <li>Backpacking trips: 3-day solo trip in Three Sisters Wilderness</li>
-      </ul>
-      <div class="project-tech">
-        <span class="tech-tag">Risk Assessment</span>
-        <span class="tech-tag">Problem Solving</span>
-        <span class="tech-tag">Physical Fitness</span>
-        <span class="tech-tag">Self-Reliance</span>
-      </div>
-      <div class="project-outcomes">
-        <strong>Benefits:</strong> Stress management, physical fitness, appreciation for the outdoors/PNW and mental resilience building
-      </div>
-    </div>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <span>↑</span>
+    </button>
   </main>
+
+  <script>
+    // Project filtering functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Remove active class from all buttons
+          filterBtns.forEach(b => b.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          const filter = this.getAttribute('data-filter');
+          
+          projectCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'block';
+              card.style.animation = 'fadeIn 0.5s ease-in';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Back to top functionality
+      const backToTopBtn = document.getElementById('back-to-top');
+      
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
