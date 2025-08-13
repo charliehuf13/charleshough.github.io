@@ -377,6 +377,10 @@
       filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
           console.log('Filter clicked:', this.getAttribute('data-filter'));
+          
+          // Don't do anything if this button is already active
+          if (this.classList.contains('active')) return;
+          
           // Remove active class from all buttons
           filterBtns.forEach(b => b.classList.remove('active'));
           // Add active class to clicked button
@@ -384,14 +388,27 @@
           
           const filter = this.getAttribute('data-filter');
           
+          // First fade out all cards
           projectCards.forEach(card => {
-            if (filter === 'all' || card.getAttribute('data-category') === filter) {
-              card.style.display = 'block';
-              card.style.animation = 'fadeIn 0.5s ease-in';
-            } else {
-              card.style.display = 'none';
-            }
+            card.style.transition = 'opacity 0.2s ease-out, transform 0.2s ease-out';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
           });
+          
+          // Then show/hide appropriate cards after a brief delay
+          setTimeout(() => {
+            projectCards.forEach(card => {
+              if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                card.style.display = 'block';
+                setTimeout(() => {
+                  card.style.opacity = '1';
+                  card.style.transform = 'translateY(0)';
+                }, 10);
+              } else {
+                card.style.display = 'none';
+              }
+            });
+          }, 150);
         });
       });
 

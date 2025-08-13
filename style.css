@@ -364,39 +364,68 @@ a {
 .project-filters {
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 3rem;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
   flex-wrap: wrap;
+  padding: 0.5rem;
+  background: rgba(248, 249, 252, 0.6);
+  border-radius: 25px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .filter-btn {
   background: #ffffff;
   color: #002147;
-  border: 2px solid #e9ecef;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  border: 1px solid #dee2e6;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  text-transform: none;
+  letter-spacing: 0.2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.filter-btn:hover::before {
+  left: 100%;
 }
 
 .filter-btn:hover {
-  background: #f8f9fa;
+  background: #f8f9fc;
   border-color: #002147;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 33, 71, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.12);
+  color: #001a33;
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, #002147 0%, #004080 100%);
+  background: #002147;
   color: #ffffff;
   border-color: #002147;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 33, 71, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.2);
+  transform: none;
+}
+
+.filter-btn.active:hover {
+  background: #001a33;
+  transform: translateY(-1px);
 }
 
 /* Projects Grid */
@@ -613,11 +642,14 @@ a {
 }
 
 .project-content code {
-  background: #f8f9fa;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.9em;
-  color: #e83e8c;
+  background: #f1f3f4;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.88em;
+  color: #d73a49;
+  font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  font-weight: 500;
+  border: 1px solid #e1e4e8;
 }
 
 /* Back to Top Button */
@@ -673,12 +705,15 @@ a {
   }
   
   .project-filters {
-    gap: 0.5rem;
+    gap: 0.4rem;
+    padding: 0.4rem;
+    margin-bottom: 2rem;
   }
   
   .filter-btn {
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem 1rem;
     font-size: 0.8rem;
+    border-radius: 16px;
   }
   
   .project-header {
