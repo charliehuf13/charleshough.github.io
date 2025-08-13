@@ -368,11 +368,15 @@
   <script>
     // Project filtering functionality
     document.addEventListener('DOMContentLoaded', function() {
+      console.log('Projects page loaded - initializing filters');
       const filterBtns = document.querySelectorAll('.filter-btn');
       const projectCards = document.querySelectorAll('.project-card');
       
+      console.log('Found', filterBtns.length, 'filter buttons and', projectCards.length, 'project cards');
+      
       filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
+          console.log('Filter clicked:', this.getAttribute('data-filter'));
           // Remove active class from all buttons
           filterBtns.forEach(b => b.classList.remove('active'));
           // Add active class to clicked button

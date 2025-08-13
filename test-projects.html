@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test - Projects Styling</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="projects-header">
+      <h2>Test - Projects Styling</h2>
+      <p class="projects-subtitle">This is a test page to verify the new project styling is working.</p>
+    </div>
+    
+    <!-- Project Filters -->
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="research">Research</button>
+      <button class="filter-btn" data-filter="technical">Technical</button>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card featured" data-category="research">
+        <div class="project-header">
+          <h3>🧬 Test Research Project</h3>
+          <div class="project-meta">
+            <span class="project-status ongoing">Ongoing</span>
+            <span class="project-date">2024</span>
+            <span class="project-type">Research</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <p><strong>Test Content:</strong> If you can see this with the new styling (rounded corners, modern design), then the CSS is working!</p>
+          
+          <div class="project-tech">
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          
+          <div class="project-outcomes">
+            <strong>Result:</strong> Styling verification successful!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Test page loaded successfully!');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          console.log('Filter button clicked:', this.textContent);
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

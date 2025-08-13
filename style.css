@@ -408,15 +408,15 @@ a {
 
 /* Project Cards */
 .project-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 0;
-  margin: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e9ecef;
-  transition: all 0.3s ease;
-  overflow: hidden;
-  position: relative;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+  margin: 0 0 2rem 0 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid #e9ecef !important;
+  transition: all 0.3s ease !important;
+  overflow: hidden !important;
+  position: relative !important;
 }
 
 .project-card::before {
@@ -441,8 +441,8 @@ a {
 }
 
 .project-card.featured {
-  border: 2px solid #e3f2fd;
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 2px solid #e3f2fd !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
 }
 
 .project-card.featured::before {
@@ -733,66 +733,7 @@ a {
   }
 }
 
-/* Legacy project card styles - keeping for compatibility */
-.project-card {
-  background-color: #ffffff;
-  border-left: 4px solid var(--primary);
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.project-card.featured {
-  border-left: 6px solid #002147;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-}
-
-.project-card.template {
-  background: #fafafa;
-  border-left: 4px dashed #ccc;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  display: none; /* Hide templates from public view */
-}
-
-.project-card h3 {
-  color: var(--primary);
-  margin-bottom: 8px;
-}
-
-.project-card pre {
-  background-color: #eef2f7;
-  padding: 12px;
-  border-left: 3px solid #007acc;
-  font-size: 0.9em;
-  overflow-x: auto;
-}
-
-.project-nav {
-  margin-bottom: 20px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.project-nav button {
-  background-color: var(--primary);
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.9em;
-}
-
-.project-nav button:hover {
-  background-color: #004577;
-}
-
-.project-group {
-  margin-top: 20px;
-}
+/* Legacy compatibility styles */
 
 .project-note {
   text-align: center;
